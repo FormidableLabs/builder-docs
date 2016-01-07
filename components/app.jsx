@@ -1,5 +1,6 @@
 import React from "react";
 
+import Docs from "./docs";
 import { Header, Footer } from "formidable-landers";
 
 class App extends React.Component {
@@ -7,9 +8,8 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <div>
-          Hello, world!
-        </div>
+        <h1>Hello, world!</h1>
+        <Docs />
         <Footer />
       </div>
     );

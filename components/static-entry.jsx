@@ -7,8 +7,7 @@ import Index from "../templates/index.hbs";
 
 // Run once we hit the client side
 if (typeof document !== "undefined") {
-  const rootEl = document.querySelector(".js-content");
-  render(<App />, document.querySelector(".content"));
+  render(<App />, document.getElementById("content"));
 }
 
 // Expose the function `static-site-generator-webpack-plugin` needs to build its HTML
