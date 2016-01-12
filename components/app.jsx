@@ -22,10 +22,11 @@ class App extends React.Component {
     return {
       zIndex: "0",
       position: "absolute",
-      top: top ? top : "60%",
+      top: top ? top : "40%",
       left: "0",
       right: "0",
       height: "120%",
+      transformOrigin: "top left",
       transform: transform,
       backgroundColor: bgColor
     };
@@ -35,20 +36,20 @@ class App extends React.Component {
     return {
       zIndex: "-1",
       position: "absolute",
-      top: "0",
+      bottom: "100%",
       left: "0",
       right: "0",
-      height: "200px",
-      transformOrigin: "center left",
+      height: "500px",
+      transformOrigin: "bottom center",
       transform: transform,
-      backgroundColor: bgColor
+      backgroundColor: settings.white
     };
   }
 
   getInstallerStyles() {
     return {
       zIndex: "1",
-      margin: "0 0 -2em 0",
+      margin: "0",
       position: "relative",
       textAlign: "center"
     };
@@ -70,6 +71,7 @@ class App extends React.Component {
 
     getMainStyles() {
       return {
+        zIndex: "0",
         position: "relative",
         margin: "0",
         padding: "0",
@@ -80,6 +82,7 @@ class App extends React.Component {
     }
 
   render() {
+    // TODO:      <div style={this.getBackgroundSkewStyles("skew(0deg, -24deg)", settings.gray)}></div>
     return (
       <div>
         <Header backgroundColor={settings.darkGray} />
