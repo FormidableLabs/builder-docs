@@ -82,7 +82,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header backgroundColor={settings.darkGray} />
         <div style={this.getHeroStyles()}>
           <div style={this.getSkewStyles("skew(0deg, 15deg)", settings.jet)}></div>
           <h1 style={{margin: "0 auto 2em", zIndex: "1", position: "relative", width: "65%", maxWidth: "995px"}}>
@@ -99,7 +99,7 @@ class App extends React.Component {
             </div>
           </div>
         </main>
-        <Footer styleOverrides={{margin: "0"}}/>
+        <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}/>
         <Style rules={theme} />
       </div>
     );
