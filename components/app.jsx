@@ -11,7 +11,7 @@ class App extends React.Component {
   getHeroStyles() {
     return {
       position: "relative",
-      margin: "0 auto",
+      margin: "0 auto 25% auto",
       padding: "200px 0 0",
       backgroundColor: "#0b0b0b",
       background: "#0b0b0b url('./static/bg.png') top center repeat-x"
@@ -72,7 +72,7 @@ class App extends React.Component {
     return {
       zIndex: "0",
       position: "relative",
-      margin: "25% 0 0 0",
+      margin: "0",
       padding: "0",
       width: "100%",
       background: settings.white
