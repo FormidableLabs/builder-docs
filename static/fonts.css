@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./fonts/CooperHewitt-Light.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-Light.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: italic;
+  src: url("./fonts/CooperHewitt-LightItalic.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-LightItalic.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./fonts/CooperHewitt-Book.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-Book.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 300;
+  font-style: italic;
+  src: url("./fonts/CooperHewitt-BookItalic.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-BookItalic.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/CooperHewitt-Semibold.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-Semibold.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "CooperHewitt";
+  font-weight: 500;
+  font-style: italic;
+  src: url("./fonts/CooperHewitt-SemiboldItalic.woff") format("woff"), /* Pretty Modern Browsers */
+       url("./fonts/CooperHewitt-SemiboldItalic.svg#svgFontName") format("svg"); /* Legacy iOS */
+}
