@@ -25,7 +25,8 @@ export default {
     backgroundColor: settings.white,
     background: settings.jet,
     fontFamily: settings.sansSerif,
-    fontSize: "16px",
+    fontSize: "18px",
+    fontWeight: "300",
     lineHeight: 1.625,
     margin: 0,
     color: settings.jet,
@@ -97,15 +98,32 @@ export default {
   "h1,h2,h3,h4": {
     fontFamily: settings.sansSerif,
     fontWeight: "normal",
-    lineHeight: 1.2
+    lineHeight: 1.3
+  },
+  "strong": {
+    fontWeight: "500"
+  },
+  "em": {
+    fontStyle: "italic"
+  },
+  "ul": {
+    margin: "0",
+    padding: "0"
+  },
+  "li": {
+    margin: "0",
+    padding: "0",
+    listStyle: "none"
   },
   /*
    * Headlines/Headings
    */
   ".Headline": {
+    color: settings.lighterJet,
     fontFamily: settings.sansSerif,
-    fontSize: "2.5rem",
-    fontWeight: "normal"
+    fontSize: "2.75rem",
+    fontWeight: "200", // Light
+    lineHeight: 1.3
   },
   ".Headline--minor": {
     fontSize: "2rem",
@@ -127,21 +145,21 @@ export default {
    */
   "a": {
     color: settings.jet,
-    fontWeight: 700,
+    fontWeight: "500",
     textDecoration: "none",
-    boxShadow: "inset 0 -1px 0 " + settings.gray,
-    transition: "color 0.2s ease, box-shadow 0.5s ease"
+    borderBottom: "1px solid rgba(0,0,0,0.2)",
+    transition: "color 0.2s ease, border 0.5s ease"
   },
   "a:hover, a:focus": {
     color: settings.red,
-    boxShadow: "inset 0 -1px 0 " + settings.palestRed,
-    transition: "color 0.2s ease, box-shadow 0.5s ease"
+    borderBottom: "1px solid " + settings.palestRed,
+    transition: "color 0.2s ease, border 0.5s ease"
   },
   ".Link--unstyled": {
-    boxShadow: "none"
+    borderBottom: "none"
   },
   ".Link--unstyled:hover, .Link--unstyled:focus": {
-    boxShadow: "none"
+    borderBottom: "none"
   },
   /*
    * Buttons!
@@ -182,10 +200,8 @@ export default {
    */
   ".Container": {
     margin: "0 auto",
-    maxWidth: "815px",
-    paddingLeft: "1em",
-    paddingRight: "1em",
-    paddingBottom: "1em"
+    maxWidth: "820px",
+    padding: "0 5%"
   },
   ".Row": {
     padding: "36px 0"
@@ -194,12 +210,25 @@ export default {
     marginTop: "-24px"
   },
   /*
+   * Big Copy
+   */
+   ".Focus": {
+     margin: "0 auto",
+     maxWidth: "720px",
+     fontSize: "24px",
+     fontSmoothing: "antialiased"
+   },
+  /*
    * Copy
    */
   ".Copy": {
     margin: "0 auto",
-    maxWidth: "720px"
+    maxWidth: "600px",
+    fontSmoothing: "antialiased"
   },
+ ".Copy--hero": {
+   fontSize: "24px"
+ },
   ".Copy .highlight": {
     marginLeft: "-16px",
     marginRight: "-16px"
@@ -240,9 +269,9 @@ export default {
     marginTop: "0.25em",
     marginBottom: "0px"
   },
-  ".Copy code, .Ecology code": {
+  ".Copy code, .Ecology code, .Focus code": {
     fontFamily: settings.monospace,
-    background: settings.white,
+    background: "rgba(135, 135, 135, 0.1)",
     color: settings.jet,
     borderRadius: 3,
     padding: "0 5px"
@@ -250,17 +279,6 @@ export default {
   ".highlight code": {
     background: "transparent",
     padding: 0
-  },
-  ".Installer": {
-    display: "inline-block",
-    background: settings.darkGray,
-    border: "1px solid " + settings.gray,
-    color: settings.jet,
-    fontFamily: settings.monospace,
-    fontSize: "18px",
-    lineHeight: 1.2,
-    margin: "0 auto",
-    padding: "16px 32px"
   },
   /*
    * Ecology text wrangling

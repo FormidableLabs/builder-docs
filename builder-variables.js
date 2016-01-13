@@ -3,8 +3,7 @@ module.exports = {
   // --------
   // Fonts
   // --------
-  sansSerif: "'CooperHewitt', 'acumin-pro', 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-  headlineSansSerif: "'CooperHewitt', 'acumin-pro-semi-condensed', 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  sansSerif: "'CooperHewitt', 'Franklin Gothic', 'Trade Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif",
   monospace: "'Source Code Pro', 'Inconsolata', 'Courier New', 'Courier', monospace",
   // --------
   // Colors
@@ -14,6 +13,7 @@ module.exports = {
   darkJet: "#111111",
   jet: "#151515",
   lightJet: "#1f1f1f",
+  lighterJet: "#303030",
   // Grays
   darkGray: "#878787",
   gray: "#d7d7d7",
@@ -25,6 +25,15 @@ module.exports = {
   palestRed: "#E5847D",
   palerRed: "#C75B54",
   paleRed: "#bd4139",
-  red: "#bd1e13"
+  red: "#bd1e13",
+  // --------
+  // Media Queries
+  // --------
+  mediaQueries: {
+    small: "@media (min-width: 24em)",
+    medium: "@media (min-width: 32em)",
+    large: "@media (min-width: 40em)",
+    xlarge: "@media (min-width: 60em)"
+  }
 };
 /* eslint-enable max-len */
