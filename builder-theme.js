@@ -2,7 +2,7 @@
 // BUILDER THEME
 // -------------------------------
 // Settings
-import settings from "./builder-settings";
+import settings from "./builder-variables";
 
 // Stylesheet
 export default {

@@ -3,7 +3,8 @@ module.exports = {
   // --------
   // Fonts
   // --------
-  sansSerif: "'Acumin Pro', 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  sansSerif: "'CooperHewitt', 'acumin-pro', 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  headlineSansSerif: "'CooperHewitt', 'acumin-pro-semi-condensed', 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif",
   monospace: "'Source Code Pro', 'Inconsolata', 'Courier New', 'Courier', monospace",
   // --------
   // Colors

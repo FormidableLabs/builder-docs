@@ -5,7 +5,7 @@ import Docs from "./docs";
 import Hero from "./hero";
 import { Header, Footer } from "formidable-landers";
 
-import settings from "../builder-settings";
+import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
