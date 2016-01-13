@@ -80,7 +80,6 @@ class App extends React.Component {
   }
 
   render() {
-    // TODO:      <div style={this.getBackgroundSkewStyles("skew(0deg, -24deg)", settings.gray)}></div>
     return (
       <div>
         <Header backgroundColor={settings.darkGray} />
