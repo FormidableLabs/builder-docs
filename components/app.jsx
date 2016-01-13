@@ -32,17 +32,17 @@ class App extends React.Component {
     };
   }
 
-  getBackgroundSkewStyles(transform, bgColor) {
+  getBackgroundSkewStyles(transform) {
     return {
       zIndex: "-1",
       position: "absolute",
-      bottom: "100%",
+      top: "0",
       left: "0",
       right: "0",
-      height: "500px",
-      transformOrigin: "bottom center",
+      height: "100%",
+      transformOrigin: "top left",
       transform: transform,
-      backgroundColor: settings.white
+      background: "linear-gradient( 0deg, " + settings.white + ", " + settings.gray + " )"
     };
   }
 
@@ -68,18 +68,16 @@ class App extends React.Component {
     };
   }
 
-
-    getMainStyles() {
-      return {
-        zIndex: "0",
-        position: "relative",
-        margin: "0",
-        padding: "0",
-        paddingTop: "100px",
-        width: "100%",
-        background: "linear-gradient( 60deg, " + settings.white + ", " + settings.gray + " )"
-      };
-    }
+  getMainStyles() {
+    return {
+      zIndex: "0",
+      position: "relative",
+      margin: "25% 0 0 0",
+      padding: "0",
+      width: "100%",
+      background: settings.white
+    };
+  }
 
   render() {
     // TODO:      <div style={this.getBackgroundSkewStyles("skew(0deg, -24deg)", settings.gray)}></div>
@@ -96,6 +94,7 @@ class App extends React.Component {
           </div>
         </div>
         <main style={this.getMainStyles()}>
+          <div style={this.getBackgroundSkewStyles("skew(0deg, -24deg)")}></div>
           <div className="Container">
             <div className="Copy">
               <Docs />
