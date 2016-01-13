@@ -41,11 +41,13 @@ class Hero extends React.Component {
   getInstallerHeadingStyles() {
     return {
       backgroundColor: settings.gold,
+      border: "1px solid " + settings.darkGold,
       color: settings.jet,
       display: "inline-block",
       fontFamily: settings.monospace,
       fontSize: "1.5rem",
-      margin: "0",
+      lineHeight: 1.2,
+      margin: "0 auto",
       padding: "1em 2em",
       textAlign: "center"
     };
