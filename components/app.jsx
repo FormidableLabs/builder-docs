@@ -43,7 +43,7 @@ class App extends React.Component {
         <main style={this.getMainStyles()}>
           <div style={this.getBackgroundSkewStyles()}></div>
           <div className="Container">
-            <h3 className="Headline">
+            <h3 className="Headline" style={{marginLeft: "3rem"}}>
               Simple multiproject management through composable npm task workflows.
             </h3>
             <div className="Focus">

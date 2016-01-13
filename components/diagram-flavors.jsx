@@ -54,7 +54,7 @@ class Diagram extends React.Component {
           <div style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
             <p style={this.getRepoHeadingStyles()}>
-              <i className="octicon octicon-repo" style={{verticalAlign: "middle"}}></i> strawberry
+              <i className="octicon octicon-repo"></i> strawberry
             </p>
             <ul style={this.getListStyles()}>
               <li>.babelrc</li>
@@ -74,7 +74,7 @@ class Diagram extends React.Component {
           <div style={secondRepoStyles.wrapper}>
             <div style={secondRepoStyles.content}>
             <p style={this.getRepoHeadingStyles()}>
-              <i className="octicon octicon-repo" style={{verticalAlign: "middle"}}></i> blueberry
+              <i className="octicon octicon-repo"></i> blueberry
             </p>
             <ul style={this.getListStyles()}>
               <li>.babelrc</li>
@@ -94,7 +94,7 @@ class Diagram extends React.Component {
           <div style={thirdRepoStyles.wrapper}>
             <div style={thirdRepoStyles.content}>
             <p style={this.getRepoHeadingStyles()}>
-              <i className="octicon octicon-repo" style={{verticalAlign: "middle"}}></i> chocolate
+              <i className="octicon octicon-repo"></i> chocolate
             </p>
             <ul style={this.getListStyles()}>
               <li>.babelrc</li>

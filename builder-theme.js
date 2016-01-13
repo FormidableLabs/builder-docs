@@ -107,12 +107,16 @@ export default {
     fontStyle: "italic"
   },
   "ul": {
-    margin: "0",
     padding: "0"
+  },
+  "ol": {
+    padding: "0 0 0 1.5rem"
   },
   "li": {
     margin: "0",
-    padding: "0",
+    padding: "0"
+  },
+  "ul > li": {
     listStyle: "none"
   },
   /*
@@ -147,13 +151,16 @@ export default {
     color: settings.jet,
     fontWeight: "500",
     textDecoration: "none",
-    borderBottom: "1px solid rgba(0,0,0,0.2)",
-    transition: "color 0.2s ease, border 0.5s ease"
+    backgroundColor: "transparent",
+    borderTop: "3px solid transparent",
+    borderBottom: "3px solid " + settings.gold,
+    transition: "all 0.5s ease"
   },
   "a:hover, a:focus": {
-    color: settings.red,
-    borderBottom: "1px solid " + settings.palestRed,
-    transition: "color 0.2s ease, border 0.5s ease"
+    backgroundColor: settings.gold,
+    borderTop: "3px solid " + settings.gold,
+    borderBottom: "3px solid " + settings.gold,
+    transition: "all 0.5s ease"
   },
   ".Link--unstyled": {
     borderBottom: "none"
@@ -200,7 +207,7 @@ export default {
    */
   ".Container": {
     margin: "0 auto",
-    maxWidth: "820px",
+    maxWidth: "960px",
     padding: "0 5%"
   },
   ".Row": {
@@ -261,7 +268,7 @@ export default {
     position: "absolute",
     fontSize: "8px",
     borderRadius: "50%",
-    border: "1px solid " + settings.red,
+    border: "1px solid rgba(48, 48, 48, 0.5)",
     left: "-24px",
     top: "11px"
   },
@@ -270,11 +277,13 @@ export default {
     marginBottom: "0px"
   },
   ".Copy code, .Ecology code, .Focus code": {
-    fontFamily: settings.monospace,
     background: "rgba(135, 135, 135, 0.1)",
     color: settings.jet,
-    borderRadius: 3,
-    padding: "0 5px"
+    fontFamily: settings.monospace,
+    fontSize: "0.925em",
+    borderRadius: "3px",
+    padding: "0 5px",
+    display: "inline-block"
   },
   ".highlight code": {
     background: "transparent",
@@ -287,7 +296,13 @@ export default {
     maxWidth: "640px" // Ideal 60–70 characters per line
   },
   ".Overview pre": {
-    overflow: "hidden" // Hide horizontal scrollbars for playgrounds.
+    background: "rgba(135, 135, 135, 0.1)",
+    padding: "0.25em 0.5em",
+    // overflow: "hidden", // Hide horizontal scrollbars for playgrounds.
+    overflowX: "scroll" // bring back scrollbars for readme.md
+  },
+  ".Overview pre code": {
+    background: "none"
   },
   /*
    * Interactive/Component Playground
