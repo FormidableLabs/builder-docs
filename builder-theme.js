@@ -7,29 +7,23 @@ import settings from "./builder-variables";
 // Stylesheet
 export default {
   /*
-   * Overrides
-   */
-  "#builder": {
-    display: "none"
-  },
-  /*
    * Normalize & Element Selectors
    */
   "*, *:before, *:after": {
     boxSizing: "inherit"
   },
   html: {
-    textSizeAdjust: "100%"
+    textSizeAdjust: "100%",
+    fontSize: "16px"
   },
   body: {
     backgroundColor: settings.white,
     background: settings.jet,
     fontFamily: settings.sansSerif,
-    fontSize: "18px",
     fontWeight: "300",
     lineHeight: 1.625,
     margin: 0,
-    color: settings.jet,
+    color: settings.darkerJet,
     boxSizing: "border-box"
   },
   "html, body": {
@@ -74,8 +68,8 @@ export default {
     textAlign: "left"
   },
   "h1,h2,h3,h4,h5,h6,hgroup, ul,ol,dd, p,figure, pre,table,fieldset,hr, .highlight": {
-    marginTop: 0,
-    marginBottom: "1.5rem"
+    marginTop: "1.5em",
+    marginBottom: "0"
   },
   img: {
     maxWidth: "100%"
@@ -84,24 +78,29 @@ export default {
     fill: "currentColor"
   },
   h1: {
-    fontSize: "2.75rem"
+    fontSize: "2.125em",
+    fontWeight: 200
   },
   h2: {
-    fontSize: "2.5rem"
+    fontSize: "2em",
+    fontWeight: 200
   },
   h3: {
-    fontSize: "2.125rem"
+    fontSize: "1.875em",
+    fontWeight: 300
   },
   "h4, h5, h6": {
-    fontSize: "1.9rem"
+    fontSize: "1em",
+    fontWeight: 500,
+    textTransform: "uppercase",
+    letterSpacing: "0.05em"
   },
   "h1,h2,h3,h4": {
     fontFamily: settings.sansSerif,
-    fontWeight: "normal",
     lineHeight: 1.3
   },
   "strong": {
-    fontWeight: "500"
+    fontWeight: 500
   },
   "em": {
     fontStyle: "italic"
@@ -110,7 +109,7 @@ export default {
     padding: "0"
   },
   "ol": {
-    padding: "0 0 0 1.5rem"
+    padding: "0 0 0 1.5em"
   },
   "li": {
     margin: "0",
@@ -125,16 +124,17 @@ export default {
   ".Headline": {
     color: settings.lighterJet,
     fontFamily: settings.sansSerif,
-    fontSize: "2.75rem",
-    fontWeight: "200", // Light
+    fontSize: "2.125em",
+    fontWeight: 200, // Light
     lineHeight: 1.3
   },
   ".Headline--minor": {
-    fontSize: "2rem",
-    fontStyle: "italic"
+    fontSize: "2em",
+    fontWeight: 300
   },
   ".Headline--major": {
-    fontSize: "3rem",
+    fontSize: "2.5em",
+    fontWeight: 200, // Light
     lineHeight: 1.3,
     fontStyle: "italic"
   },
@@ -208,7 +208,7 @@ export default {
   ".Container": {
     margin: "0 auto",
     maxWidth: "960px",
-    padding: "0 5%"
+    padding: "0 2em"
   },
   ".Row": {
     padding: "36px 0"
@@ -222,7 +222,7 @@ export default {
    ".Focus": {
      margin: "0 auto",
      maxWidth: "720px",
-     fontSize: "24px",
+     fontSize: "1.3334em",
      fontSmoothing: "antialiased"
    },
   /*
@@ -231,27 +231,25 @@ export default {
   ".Copy": {
     margin: "0 auto",
     maxWidth: "600px",
-    fontSmoothing: "antialiased"
+    fontSmoothing: "antialiased",
+    fontSize: "1rem"
   },
- ".Copy--hero": {
-   fontSize: "24px"
- },
   ".Copy .highlight": {
     marginLeft: "-16px",
     marginRight: "-16px"
   },
   ".Copy .highlight pre": {
-    marginBottom: 0,
+    marginTop: 0,
     background: settings.jet,
     color: "#fff",
     fontFamily: settings.monospace,
-    fontSize: "16px",
+    fontSize: "1em",
     lineHeight: 1.2,
     overflow: "auto",
-    padding: "16px"
+    padding: "1em"
   },
   ".Copy ul, .Ecology ul": {
-    paddingLeft: "24px",
+    paddingLeft: "1.5em",
     listStyle: "none"
   },
   ".Copy ul > li, .Ecology ul > li": {
@@ -273,8 +271,8 @@ export default {
     top: "11px"
   },
   ".Copy li > ul, .Ecology li > ul": {
-    marginTop: "0.25em",
-    marginBottom: "0px"
+    marginTop: 0,
+    marginBottom: "0.25em"
   },
   ".Copy code, .Ecology code, .Focus code": {
     background: "rgba(135, 135, 135, 0.1)",
@@ -313,7 +311,7 @@ export default {
   ".Interactive .playground": {
     display: "flex",
     flexWrap: "wrap",
-    marginBottom: "24px"
+    marginTop: "1.3334em"
   },
   ".Interactive:before, .Interactive .playgroundPreview:before": {
     fontFamily: settings.sansSerif,
@@ -333,8 +331,8 @@ export default {
     fontFamily: settings.monospace,
     fontSize: "1rem",
     lineHeight: 1.2,
-    marginBottom: "30px",
-    padding: "16px 16px 0 16px",
+    marginTop: "1.66666em",
+    padding: "0.88888em 0.88888em 0 0.88888em",
     border: "1px solid #ebe3db"
   },
   ".Interactive .playgroundPreview": {
@@ -379,7 +377,7 @@ export default {
   ".Prop-description": {
     display: "block",
     lineHeight: "1.3em",
-    marginBottom: "0.5em"
+    marginTop: "0.5em"
   },
   ".Prop-examples, .Prop-default": {
     display: "block",
@@ -410,10 +408,36 @@ export default {
     textAlign: "right"
   },
   ".u-marginModule > *:last-child": {
-    marginBottom: 0
+    marginTop: 0
   },
   mediaQueries: { // TODO: Extract for server-side rendering
-    "only screen and (min-width: 70em)": {
+    "only screen and (min-width: 32em)": {
+      h1: {
+        fontSize: "2.5em"
+      },
+      h2: {
+        fontSize: "2.125em"
+      },
+      h3: {
+        fontSize: "2em"
+      },
+      "h4, h5, h6": {
+        fontSize: "1.1em"
+      },
+      ".Headline": {
+        fontSize: "2.5em"
+      },
+      ".Headline--minor": {
+        fontSize: "2.125em"
+      },
+      ".Headline--major": {
+        fontSize: "2.75em"
+      }
+    },
+    "only screen and (min-width: 60em)": {
+      html: {
+        fontSize: "18px"
+      },
       h1: {
         fontSize: "3rem"
       },
@@ -423,8 +447,8 @@ export default {
       h3: {
         fontSize: "2.125rem"
       },
-      "h4, h5, h6": {
-        fontSize: "1.9rem"
+      ".Headline": {
+        fontSize: "2.75em"
       },
       ".Headline--major": {
         fontSize: "3.5rem",
@@ -435,22 +459,19 @@ export default {
         paddingTop: "65px",
         paddingBottom: "0"
       },
-      ".Logo img": {
-        width: "230px"
-      },
       ".Copy, .Ecology p": {
         fontSize: "1.125rem"
       },
       ".Copy .highlight": {
-        margin: "36px -24px"
+        margin: "2em -1.3334em"
       },
       ".Copy .highlight pre": {
-        padding: "24px"
+        padding: "1.3334em"
       },
       ".Installer": {
-        padding: "24px 48px",
-        marginTop: "24px",
-        marginBottom: "24px"
+        padding: "1.3334em 2.6667em", //24px 48px
+        marginTop: "1.3334em",
+        marginBottom: "1.3334em"
       },
       ".Interactive .playground": {
         display: "flex",
@@ -459,13 +480,13 @@ export default {
       ".Interactive .playgroundCode": {
         display: "flex",
         flex: "1",
-        marginRight: "12px",
-        marginBottom: "0"
+        marginRight: "0.6667em",
+        marginTop: 0
       },
       ".Interactive .playgroundPreview": {
         display: "flex",
         flex: "1",
-        marginLeft: "12px"
+        marginLeft: "0.6667em"
       }
     }
   },
