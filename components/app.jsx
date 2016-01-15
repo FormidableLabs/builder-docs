@@ -10,6 +10,17 @@ import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
+  getHeaderLinkStyles() {
+    return {
+      color: settings.white,
+      borderColor: settings.lighterJet,
+      ":hover": {
+        color: settings.darkGold,
+        backgroundColor: settings.jet
+      }
+    };
+  }
+
   getBackgroundSkewStyles() {
     return {
       zIndex: "-1",
@@ -38,7 +49,7 @@ class App extends React.Component {
   render() {
     return (
       <StyleRoot>
-        <Header backgroundColor={settings.darkGray} />
+        <Header backgroundColor={settings.darkerJet} linkStyles={this.getHeaderLinkStyles()} />
         <Hero />
         <div style={this.getMainStyles()}>
           <section style={{position: "relative"}}>

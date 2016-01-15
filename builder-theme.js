@@ -148,17 +148,16 @@ export default {
    * Links
    */
   "a": {
+    paddingTop: "0.15em",
     color: settings.jet,
     fontWeight: "500",
     textDecoration: "none",
     backgroundColor: "transparent",
-    borderTop: "3px solid transparent",
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
   "a:hover, a:focus": {
     backgroundColor: settings.gold,
-    borderTop: `3px solid ${settings.gold}`,
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
