@@ -44,22 +44,22 @@ class App extends React.Component {
           <section style={{position: "relative"}}>
             <div style={this.getBackgroundSkewStyles()}></div>
             <div className="Container">
-              <h3 className="Headline" style={{marginLeft: "3rem"}}>
+              <h3 className="Headline Tagline">
                 Simple multiproject management through composable npm task workflows.
               </h3>
-              <div className="Focus">
+              <div className="Copy Copy--Big">
                 <p>
                   <code>npm</code> is great for controlling a single repository’s dependencies and tasks. But what if you need <strong>shared infrastructure and configuration across multiple repos</strong>?
                 </p>
               </div>
               <Diagram />
-              <div className="Focus">
+              <div className="Copy Copy--Big">
                 <p>
                   Builder is a meta tool for controlling npm workflows. If you’re working on multiple similar repos, it allows you to <strong>define tasks and dependencies in a single shared source of truth</strong>.
                 </p>
               </div>
               <Diagram archetype />
-              <div className="Focus">
+              <div className="Copy Copy--Big">
                 <p>
                   Or, if you’re working in a single repo, it allows you to dramatically simplify your <code>package.json</code>. Either way, it keeps you close to vanilla npm—you don’t need to buy into a whole new build philosophy to start benefiting from builder today.
                 </p>
@@ -67,8 +67,8 @@ class App extends React.Component {
             </div>
           </section>
           <section className="Container">
-            <h1 id="docs" className="Headline">Official Documentation</h1>
             <div className="Copy">
+              <h1 id="docs" className="Headline">README</h1>
               <Docs />
             </div>
           </section>
@@ -80,4 +80,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Radium(App);

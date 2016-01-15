@@ -14,7 +14,7 @@ export default {
   },
   html: {
     textSizeAdjust: "100%",
-    fontSize: "16px"
+    fontSize: "17px"
   },
   body: {
     backgroundColor: settings.white,
@@ -208,31 +208,29 @@ export default {
   ".Container": {
     margin: "0 auto",
     maxWidth: "960px",
-    padding: "0 2em"
+    padding: "0 16px"
   },
   ".Row": {
-    padding: "36px 0"
+    padding: "2rem 0"
   },
   ".Row .Interactive": {
-    marginTop: "-24px"
+    marginTop: "-1.3334rem"
   },
-  /*
-   * Big Copy
-   */
-   ".Focus": {
-     margin: "0 auto",
-     maxWidth: "720px",
-     fontSize: "1.3334em",
-     fontSmoothing: "antialiased"
-   },
   /*
    * Copy
    */
   ".Copy": {
     margin: "0 auto",
-    maxWidth: "600px",
+    maxWidth: "720px",
+    padding: "0",
     fontSmoothing: "antialiased",
     fontSize: "1rem"
+  },
+  ".Copy p, .Copy ul, .Ecology ul": {
+    paddingRight: "0"
+  },
+  ".Tagline": {
+    textAlign: "left"
   },
   ".Copy .highlight": {
     marginLeft: "-16px",
@@ -288,11 +286,14 @@ export default {
     padding: 0
   },
   /*
+   * Big Copy
+   */
+   ".Copy--Big": {
+     fontSize: "1.3334em",
+   },
+  /*
    * Ecology text wrangling
    */
-  ".Ecology p": {
-    maxWidth: "640px" // Ideal 60–70 characters per line
-  },
   ".Overview pre": {
     background: "rgba(135, 135, 135, 0.1)",
     padding: "0.25em 0.5em",
@@ -411,7 +412,7 @@ export default {
     marginTop: 0
   },
   mediaQueries: { // TODO: Extract for server-side rendering
-    "only screen and (min-width: 32em)": {
+    "only screen and (min-width: 32em)": { //medium
       h1: {
         fontSize: "2.5em"
       },
@@ -432,9 +433,15 @@ export default {
       },
       ".Headline--major": {
         fontSize: "2.75em"
+      },
+      ".Copy, .Tagline": {
+        paddingLeft: "48px"
+      },
+      ".Copy p, .Copy ul, .Ecology ul": {
+        paddingRight: "48px"
       }
     },
-    "only screen and (min-width: 60em)": {
+    "only screen and (min-width: 60em)": { //xlarge
       html: {
         fontSize: "18px"
       },
@@ -459,6 +466,16 @@ export default {
         paddingTop: "65px",
         paddingBottom: "0"
       },
+      ".Container": {
+        maxWidth: "1260px",
+        padding: "0 36px"
+      },
+      ".Copy, .Tagline": {
+        padding: "0 0 0 60px"
+      },
+      ".Copy p, .Copy ul, .Ecology ul": {
+        paddingRight: "60px"
+      },
       ".Copy, .Ecology p": {
         fontSize: "1.125rem"
       },
@@ -467,6 +484,9 @@ export default {
       },
       ".Copy .highlight pre": {
         padding: "1.3334em"
+      },
+      ".Tagline": {
+        textAlign: "center"
       },
       ".Installer": {
         padding: "1.3334em 2.6667em", //24px 48px

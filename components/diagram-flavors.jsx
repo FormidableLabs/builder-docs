@@ -112,7 +112,7 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", "linear-gradient(90deg, #eee, " + settings.white + " )");
 
     return (
-      <Flex styleOverrides={{margin: "5em -5%"}}>
+      <Flex styleOverrides={{margin: "5em -2rem"}}>
         <Flex.Item large={3}>
           <div style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
