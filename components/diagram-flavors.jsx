@@ -6,22 +6,37 @@ import settings from "../builder-variables";
 import Flex from "./common/flex";
 
 class Diagram extends React.Component {
+  getRepoLayoutStyles() {
+    return {
+      margin: 0,
+
+      [settings.mediaQueries.large]: {
+        margin: "5em -36px"
+      }
+    };
+  }
+
   getRepoStyles(skewDegrees, bg) {
     return {
       wrapper: {
-        margin: "1em 0 2em 0",
+        margin: "0.25em 0",
         padding: "3em 1em",
 
         background: bg,
         color: settings.darkGray,
 
-        transform: "skewY(" + skewDegrees + ")"
+        [settings.mediaQueries.large]: {
+          margin: "1em 0 2em 0",
+          transform: "skewY(" + skewDegrees + ")"
+        }
       },
       content: {
         fontFamily: settings.monospace,
         fontSize: ".777777rem",
 
-        transform: "skewY(-" + skewDegrees + ")"
+        [settings.mediaQueries.large]: {
+          transform: "skewY(-" + skewDegrees + ")"
+        }
       }
     };
   }
@@ -57,11 +72,15 @@ class Diagram extends React.Component {
       fontSize: ".777777rem",
       textAlign: "center",
 
-      margin: "-5em auto 2em",
+      margin: "0 auto",
       padding: "2em 1em",
       display: "block",
       width: "100%",
-      clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)"
+      clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)",
+
+      [settings.mediaQueries.large]: {
+        margin: "-5em auto 2em"
+      }
     };
   }
 
@@ -112,7 +131,7 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", "linear-gradient(90deg, #eee, " + settings.white + " )");
 
     return (
-      <Flex styleOverrides={{margin: "5em -2rem"}}>
+      <Flex styleOverrides={this.getRepoLayoutStyles()}>
         <Flex.Item large={3}>
           <div style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
