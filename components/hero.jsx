@@ -10,7 +10,6 @@ class Hero extends React.Component {
       position: "relative",
       margin: "0 auto 25% auto",
       padding: "200px 0 0",
-      backgroundColor: "#0b0b0b",
       background: "#0b0b0b url('./static/bg.png') top center repeat-x"
     };
   }
@@ -68,4 +67,4 @@ class Hero extends React.Component {
   }
 }
 
-export default Hero;
+export default Radium(Hero);

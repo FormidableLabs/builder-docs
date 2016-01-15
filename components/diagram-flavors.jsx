@@ -170,4 +170,4 @@ Diagram.defaultProps = {
   archetype: false
 };
 
-export default Diagram;
+export default Radium(Diagram);
