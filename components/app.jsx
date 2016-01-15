@@ -20,7 +20,7 @@ class App extends React.Component {
       height: "100%",
       transformOrigin: "top left",
       transform: "skew(0deg, -24deg)",
-      background: "linear-gradient( 0deg, " + settings.white + ", " + settings.gray + " )"
+      background: `linear-gradient(0deg, ${settings.white}, ${settings.gray})`
     };
   }
 

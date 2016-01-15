@@ -53,7 +53,7 @@ class Flex extends React.Component {
         alignItems: "baseline"
       },
       gutters: {
-        margin: "-" + this.props.gutters + "em 0 0 -" + this.props.gutters + "em"
+        margin: `${this.props.gutters}em 0 0 -${this.props.gutters}em`
       },
       styleOverrides: this.props.styleOverrides
     };

@@ -27,7 +27,7 @@ class Diagram extends React.Component {
 
         [settings.mediaQueries.large]: {
           margin: "1em 0 2em 0",
-          transform: "skewY(" + skewDegrees + ")"
+          transform: `skewY(${skewDegrees})`
         }
       },
       content: {
@@ -35,7 +35,7 @@ class Diagram extends React.Component {
         fontSize: ".777777rem",
 
         [settings.mediaQueries.large]: {
-          transform: "skewY(-" + skewDegrees + ")"
+          transform: `skewY(-${skewDegrees})`
         }
       }
     };
@@ -126,9 +126,9 @@ class Diagram extends React.Component {
   }
 
   render() {
-    const firstRepoStyles = this.getRepoStyles("9deg", "linear-gradient(-90deg, #eee, " + settings.white + " )");
+    const firstRepoStyles = this.getRepoStyles("9deg", `linear-gradient(-90deg, #eee, ${settings.white})`);
     const secondRepoStyles = this.getRepoStyles("171deg", settings.white);
-    const thirdRepoStyles = this.getRepoStyles("9deg", "linear-gradient(90deg, #eee, " + settings.white + " )");
+    const thirdRepoStyles = this.getRepoStyles("9deg", `linear-gradient(90deg, #eee, ${settings.white})`);
 
     return (
       <Flex styleOverrides={this.getRepoLayoutStyles()}>

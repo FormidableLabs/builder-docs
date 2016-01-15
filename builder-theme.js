@@ -55,7 +55,7 @@ export default {
     verticalAlign: "middle"
   },
   "th, td": {
-    border: "1px solid " + settings.darkGray,
+    border: `1px solid ${settings.darkGray}`,
     padding: "0.425em 0.75em",
     verticalAlign: "top"
   },
@@ -153,13 +153,13 @@ export default {
     textDecoration: "none",
     backgroundColor: "transparent",
     borderTop: "3px solid transparent",
-    borderBottom: "3px solid " + settings.gold,
+    borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
   "a:hover, a:focus": {
     backgroundColor: settings.gold,
-    borderTop: "3px solid " + settings.gold,
-    borderBottom: "3px solid " + settings.gold,
+    borderTop: `3px solid ${settings.gold}`,
+    borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
   ".Link--unstyled": {
@@ -173,7 +173,7 @@ export default {
    */
   ".Button": {
     backgroundColor: "transparent",
-    border: "3px solid " + settings.gray,
+    border: `3px solid ${settings.gray}`,
     boxShadow: "none",
     color: settings.jet,
     fontFamily: settings.sansSerif,

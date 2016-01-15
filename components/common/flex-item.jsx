@@ -71,7 +71,7 @@ class Item extends React.Component {
         flex: "none"
       },
       gutters: {
-        padding: this.props.gutters + "em 0 0 " + this.props.gutters + "em"
+        padding: `${this.props.gutters}em 0 0 ${this.props.gutters}em`
       },
       fit: {
         flex: 1
