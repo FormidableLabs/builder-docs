@@ -479,6 +479,9 @@ export default {
       ".Copy, .Ecology p": {
         fontSize: "1.125rem"
       },
+      ".Copy--Big": {
+        fontSize: "1.3334em",
+      },
       ".Copy .highlight": {
         margin: "2em -1.3334em"
       },
