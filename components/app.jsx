@@ -1,5 +1,5 @@
 import React from "react";
-import Radium, { Style } from "radium";
+import Radium, { Style, StyleRoot } from "radium";
 
 import Diagram from "./diagram-flavors";
 import Docs from "./docs";
@@ -37,7 +37,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <StyleRoot>
         <Header backgroundColor={settings.darkGray} />
         <Hero />
         <div style={this.getMainStyles()}>
@@ -75,7 +75,7 @@ class App extends React.Component {
         </div>
         <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}/>
         <Style rules={theme} />
-      </div>
+      </StyleRoot>
     );
   }
 }
