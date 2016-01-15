@@ -306,7 +306,7 @@ export default {
    * Interactive/Component Playground
    */
   ".Interactive": {
-    minHeight: "333px"  // TODO: Extract for server-side rendering
+    minHeight: "333px"
   },
   ".Interactive .playground": {
     display: "flex",
@@ -410,7 +410,7 @@ export default {
   ".u-marginModule > *:last-child": {
     marginTop: 0
   },
-  mediaQueries: { // TODO: Extract for server-side rendering
+  mediaQueries: {
     "only screen and (min-width: 32em)": { //medium
       h1: {
         fontSize: "2.5em"

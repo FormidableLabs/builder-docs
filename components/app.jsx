@@ -73,7 +73,9 @@ class App extends React.Component {
             </div>
           </section>
         </div>
-        <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}/>
+        <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}>
+          <p>Builder is a trademark of Formidable Labs, Inc.</p>
+        </Footer>
         <Style rules={theme} />
       </StyleRoot>
     );
