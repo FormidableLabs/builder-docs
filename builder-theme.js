@@ -355,8 +355,8 @@ export default {
     height: "auto"
   },
   /*
-  * Documentation/Props
-  */
+   * Documentation/Props
+   */
   ".Documentation h1, .Documentation h2, .Documentation h3": {
     fontFamily: settings.sansSerif,
     fontWeight: "normal"

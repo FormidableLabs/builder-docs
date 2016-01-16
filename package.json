@@ -28,7 +28,7 @@
     "builder": "2.4.0",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
-    "formidable-landers": "0.0.6",
+    "formidable-landers": "0.0.7",
     "raw-loader": "0.5.1",
     "react": "0.14.5",
     "static-site-generator-webpack-plugin": "2.0.1",
