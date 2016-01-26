@@ -86,7 +86,7 @@ class App extends React.Component {
                 A builder “archetype” encapsulates shared configuration in a single source of truth. We’ve written archetypes for <a href="https://github.com/FormidableLabs/builder-react-component">React</a> and <a href="https://github.com/FormidableLabs/builder-victory-component">Victory</a> components so far, and we’re actively writing more. You can define an archetype for <strong>any type of application or component</strong>, including Backbone, Angular, and Node.
               </p>
               <p>
-                You can learn more about archetypes <a href="#archetypes">here</a>.
+                <a href="#archetypes">Learn more about archetypes</a>.
               </p>
             </div>
           </section>

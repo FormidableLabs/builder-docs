@@ -4,7 +4,7 @@ builder.formidable.com
 Marketing/documentation site for Builder
 
 # Publishing
-The site's documentation section is pulled in directly from the `builder` repo's README, which means it's only as current as your local `node_modules/builder`. To refresh the docs, run `npm run rebuild-readme`, which just nukes `builder` and reinstalls with the latest. (If you forget this step in dev, it's run automatically as part of `npm run build-static`, so you can't accidentally publish outdated docs.)
+The site's documentation section is pulled in directly from the `builder` repo's README, which means it's only as current as your local `node_modules/builder`. To refresh the docs, run `npm run reinstall-builder`, which just nukes `builder` and reinstalls with the latest. (If you forget this step in dev, it's run automatically as part of `npm run build-static`, so you can't accidentally publish outdated docs.)
 
 When it's time to publish:
 ```sh
