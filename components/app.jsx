@@ -78,6 +78,19 @@ class App extends React.Component {
             </div>
           </section>
           <section className="Container">
+            <div className="Copy Copy--Big">
+              <h1 className="Headline">
+                Archetypes 101
+              </h1>
+              <p>
+                A builder “archetype” encapsulates shared configuration in a single source of truth. We’ve written archetypes for <a href="https://github.com/FormidableLabs/builder-react-component">React</a> and <a href="https://github.com/FormidableLabs/builder-victory-component">Victory</a> components so far, and we’re actively writing more. You can define an archetype for <strong>any type of application or component</strong>, including Backbone, Angular, and Node.
+              </p>
+              <p>
+                <a href="#archetypes">Learn more about archetypes</a>.
+              </p>
+            </div>
+          </section>
+          <section className="Container">
             <div className="Copy">
               <h1 id="docs" className="Headline">Documentation</h1>
               <Docs />
