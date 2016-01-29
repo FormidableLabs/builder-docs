@@ -1,5 +1,6 @@
 import React from "react";
 import Radium from "radium";
+import {Grid, Cell} from "radium-grid";
 
 import settings from "../builder-variables";
 
@@ -9,7 +10,6 @@ class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
       margin: 0,
-
       [settings.mediaQueries.large]: {
         margin: "5em -36px"
       }
@@ -131,33 +131,38 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", `linear-gradient(90deg, #eee, ${settings.white})`);
 
     return (
-      <Flex styleOverrides={this.getRepoLayoutStyles()}>
-        <Flex.Item large={3}>
+      <Grid 
+        cellWidth={"1/3"} 
+        gutter={"0px"}
+        smallCellWidth={"1"}
+        style={this.getRepoLayoutStyles()}
+      >
+        <Cell>
           <div style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
               {this.renderFlavorName("strawberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
           </div>
-        </Flex.Item>
-        <Flex.Item large={3}>
+        </Cell>
+        <Cell>
           <div style={secondRepoStyles.wrapper}>
             <div style={secondRepoStyles.content}>
               {this.renderFlavorName("blueberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
           </div>
-        </Flex.Item>
-        <Flex.Item large={3}>
+        </Cell>
+        <Cell>
           <div style={thirdRepoStyles.wrapper}>
             <div style={thirdRepoStyles.content}>
               {this.renderFlavorName("chocolate")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
           </div>
-        </Flex.Item>
+        </Cell>
         {this.props.archetype ? this.renderFlavorArchetype() : null}
-      </Flex>
+      </Grid>
     );
   }
 }

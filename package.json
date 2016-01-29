@@ -24,8 +24,6 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "babel-core": "6.3.26",
-    "babel-loader": "6.2.1",
     "builder": "https://github.com/FormidableLabs/builder",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
@@ -39,6 +37,8 @@
   },
   "dependencies": {
     "babel-core": "6.3.26",
+    "babel-loader": "6.2.1",
+    "radium-grid": "https://github.com/tptee/radium-grid",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-react": "6.3.13",
     "handlebars": "^4.0.5",
