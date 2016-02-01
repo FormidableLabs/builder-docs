@@ -11,7 +11,7 @@ class Diagram extends React.Component {
     return {
       margin: 0,
       [settings.mediaQueries.large]: {
-        margin: "5em -36px"
+        margin: "5em 0"
       }
     };
   }
@@ -21,7 +21,7 @@ class Diagram extends React.Component {
       wrapper: {
         margin: "0.25em 0",
         padding: "3em 1em",
-
+        width: "100%",
         background: bg,
         color: settings.darkGray,
 
@@ -137,29 +137,23 @@ class Diagram extends React.Component {
         smallCellWidth={"1"}
         style={this.getRepoLayoutStyles()}
       >
-        <Cell>
-          <div style={firstRepoStyles.wrapper}>
+        <Cell style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
               {this.renderFlavorName("strawberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
-          </div>
         </Cell>
-        <Cell>
-          <div style={secondRepoStyles.wrapper}>
+        <Cell style={secondRepoStyles.wrapper}>
             <div style={secondRepoStyles.content}>
               {this.renderFlavorName("blueberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
-          </div>
         </Cell>
-        <Cell>
-          <div style={thirdRepoStyles.wrapper}>
+        <Cell style={thirdRepoStyles.wrapper}>
             <div style={thirdRepoStyles.content}>
               {this.renderFlavorName("chocolate")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
-          </div>
         </Cell>
         {this.props.archetype ? this.renderFlavorArchetype() : null}
       </Grid>
