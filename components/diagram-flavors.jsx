@@ -11,9 +11,9 @@ class Diagram extends React.Component {
     return {
       margin: 0,
       width: 'auto',
-      [settings.mediaQueries.large]: {
-        width: "auto",
-        margin: "5em -36px"
+      margin: "5em -36px",
+      [settings.mediaQueries.small]: {
+        margin: "initial"
       }
     };
   }
@@ -22,22 +22,25 @@ class Diagram extends React.Component {
     return {
       wrapper: {
         margin: "0.25em 0",
-        padding: "3em 1em",
+        padding: "3em 2em",
         width: "100%",
         background: bg,
         color: settings.darkGray,
+        transform: `skewY(${skewDegrees})`,
+        margin: "1em 0 2em 0",
 
-        [settings.mediaQueries.large]: {
-          margin: "1em 0 2em 0",
-          transform: `skewY(${skewDegrees})`
+        [settings.mediaQueries.small]: {
+          margin: "initial",
+          transform: "initial"
         }
       },
       content: {
         fontFamily: settings.monospace,
         fontSize: ".777777rem",
+        transform: `skewY(-${skewDegrees})`,
 
-        [settings.mediaQueries.large]: {
-          transform: `skewY(-${skewDegrees})`
+        [settings.mediaQueries.small]: {
+          transform: "initial"
         }
       }
     };
@@ -79,9 +82,10 @@ class Diagram extends React.Component {
       display: "block",
       width: "100%",
       clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)",
+      margin: "-5em auto 2em",
 
-      [settings.mediaQueries.large]: {
-        margin: "-5em auto 2em"
+      [settings.mediaQueries.small]: {
+        margin: "initial"
       }
     };
   }
@@ -134,28 +138,35 @@ class Diagram extends React.Component {
 
     return (
       <Grid 
-        cellWidth={"1/3"} 
-        gutter={"0px"}
-        smallCellWidth={"1"}
+        cellWidth="1/3" 
+        gutter="0px"
+        smallCellWidth="1"
         style={this.getRepoLayoutStyles()}
+        breakpoints={settings.mediaQueries}
       >
-        <Cell style={firstRepoStyles.wrapper}>
+        <Cell>
+          <div style={firstRepoStyles.wrapper}>
             <div style={firstRepoStyles.content}>
               {this.renderFlavorName("strawberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
+          </div>
         </Cell>
-        <Cell style={secondRepoStyles.wrapper}>
+        <Cell>
+          <div style={secondRepoStyles.wrapper}>
             <div style={secondRepoStyles.content}>
               {this.renderFlavorName("blueberry")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
+          </div>
         </Cell>
-        <Cell style={thirdRepoStyles.wrapper}>
+        <Cell>
+          <div style={thirdRepoStyles.wrapper}>
             <div style={thirdRepoStyles.content}>
               {this.renderFlavorName("chocolate")}
               {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
             </div>
+          </div>
         </Cell>
         {this.props.archetype ? this.renderFlavorArchetype() : null}
       </Grid>

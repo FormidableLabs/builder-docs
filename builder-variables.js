@@ -1,3 +1,5 @@
+import {Grid} from "radium-grid";
+
 /* eslint-disable max-len */
 module.exports = {
   // --------
@@ -29,11 +31,6 @@ module.exports = {
   // --------
   // Media Queries
   // --------
-  mediaQueries: {
-    small: "@media (min-width: 24em)",
-    medium: "@media (min-width: 32em)",
-    large: "@media (min-width: 40em)",
-    xlarge: "@media (min-width: 60em)"
-  }
+  mediaQueries: Grid.defaultProps.breakpoints
 };
 /* eslint-enable max-len */
