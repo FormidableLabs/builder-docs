@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "builder": "https://github.com/FormidableLabs/builder",
+    "builder": "2.5.0",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.7",
@@ -38,12 +38,12 @@
   "dependencies": {
     "babel-core": "6.3.26",
     "babel-loader": "6.2.1",
-    "radium-grid": "~1.0.0",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-react": "6.3.13",
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.1.4",
     "radium": "^0.16.2",
+    "radium-grid": "^1.0.4",
     "react-dom": "0.14.5"
   }
 }
