@@ -10,8 +10,10 @@ class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
       margin: 0,
+      width: '80%',
       [settings.mediaQueries.large]: {
-        margin: "5em 0"
+        width: "auto",
+        margin: "5em -36px"
       }
     };
   }
