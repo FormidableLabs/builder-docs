@@ -133,10 +133,11 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", `linear-gradient(90deg, #eee, ${settings.white})`);
 
     return (
-      <Grid 
-        cellWidth={"1/3"} 
+      <Grid
+        cellWidth={"1/3"}
         gutter={"0px"}
         smallCellWidth={"1"}
+        breakpoints={settings.mediaQueries}
         style={this.getRepoLayoutStyles()}
       >
         <Cell style={firstRepoStyles.wrapper}>
