@@ -4,7 +4,7 @@
   "description": "Marketing/documentation site for Builder",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "dev": "webpack-dev-server --port 3000 --config webpack.config.dev.js",
     "reinstall-builder": "rm -rf node_modules/builder && npm install",
     "webpack-static": "webpack --config webpack.config.static.js --progress --content-base /",
@@ -13,7 +13,8 @@
     "build-static": "npm run reinstall-builder && npm run webpack-static && npm run copy-assets && npm run copy-cname",
     "server-static": "http-server build",
     "open-static": "open http://localhost:8080",
-    "push-gh-pages": "git subtree push --prefix build origin gh-pages"
+    "push-gh-pages": "git subtree push --prefix build origin gh-pages",
+    "lint": "eslint *.js components/**/*.jsx"
   },
   "repository": {
     "type": "git",
@@ -26,9 +27,16 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
+    "babel-core": "6.3.26",
+    "babel-eslint": "^4.1.8",
+    "babel-loader": "6.2.1",
     "builder": "https://github.com/FormidableLabs/builder",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^8.0.2",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-react": "^3.16.1",
     "formidable-landers": "0.0.7",
     "http-server": "^0.8.5",
     "raw-loader": "0.5.1",
