@@ -7,7 +7,7 @@ import settings from "../builder-variables";
 class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
-      width: 'auto',
+      width: "auto",
       margin: "5em -36px",
       [settings.mediaQueries.medium]: {
         margin: "initial"
