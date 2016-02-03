@@ -1,6 +1,8 @@
 builder.formidable.com
 ======================
 
+[![Build Status](https://travis-ci.org/FormidableLabs/builder-docs.svg?branch=master)](https://travis-ci.org/FormidableLabs/builder-docs)
+
 Marketing/documentation site for Builder
 
 # Publishing
