@@ -7,7 +7,6 @@ import settings from "../builder-variables";
 class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
-      margin: 0,
       width: 'auto',
       margin: "5em -36px",
       [settings.mediaQueries.medium]: {
@@ -19,7 +18,6 @@ class Diagram extends React.Component {
   getRepoStyles(skewDegrees, bg) {
     return {
       wrapper: {
-        margin: "0.25em 0",
         padding: "3em 2em",
         width: "100%",
         background: bg,
@@ -28,11 +26,11 @@ class Diagram extends React.Component {
         margin: "1em 0 2em 0",
 
         [settings.mediaQueries.medium]: {
-          margin: "initial",
+          margin: "0.25em 0",
           transform: "initial"
         },
         [settings.mediaQueries.small]: {
-          margin: "initial",
+          margin: "0.25em 0",
           transform: "initial"
         }
       },
@@ -81,8 +79,6 @@ class Diagram extends React.Component {
       fontFamily: settings.monospace,
       fontSize: ".777777rem",
       textAlign: "center",
-
-      margin: "0 auto",
       padding: "2em 1em",
       display: "block",
       width: "100%",
