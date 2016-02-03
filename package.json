@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "builder": "2.5.0",
+    "builder": "https://github.com/FormidableLabs/builder",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.7",
