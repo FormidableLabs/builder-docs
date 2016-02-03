@@ -4,17 +4,17 @@
   "description": "Marketing/documentation site for Builder",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "test": "npm run lint",
-    "dev": "webpack-dev-server --port 3000 --config webpack.config.dev.js",
-    "reinstall-builder": "rm -rf node_modules/builder && npm install",
-    "webpack-static": "webpack --config webpack.config.static.js --progress --content-base /",
+    "build-static": "npm run reinstall-builder && npm run webpack-static && npm run copy-assets && npm run copy-cname",
     "copy-assets": "cp -r static build/static",
     "copy-cname": "cp CNAME build/CNAME",
-    "build-static": "npm run reinstall-builder && npm run webpack-static && npm run copy-assets && npm run copy-cname",
-    "server-static": "http-server build",
+    "dev": "webpack-dev-server --port 3000 --config webpack.config.dev.js",
+    "lint": "eslint *.js components/**/*.jsx",
     "open-static": "open http://localhost:8080",
     "push-gh-pages": "git subtree push --prefix build origin gh-pages",
-    "lint": "eslint *.js components/**/*.jsx"
+    "reinstall-builder": "rm -rf node_modules/builder && npm install",
+    "server-static": "http-server build",
+    "test": "npm run lint",
+    "webpack-static": "webpack --config webpack.config.static.js --progress --content-base /"
   },
   "repository": {
     "type": "git",
