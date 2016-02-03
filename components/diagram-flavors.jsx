@@ -4,8 +4,6 @@ import {Grid, Cell} from "radium-grid";
 
 import settings from "../builder-variables";
 
-import Flex from "./common/flex";
-
 class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
