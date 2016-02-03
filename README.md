@@ -10,6 +10,12 @@ When it's time to publish:
 ```sh
 # On master
 npm run build-static # Builds site to static HTML/JS in `/build`
+
+# Test the static build in your browser
+npm run server-static
+npm run open-static
+
+# If all looks good, let's commit and push to GH-pages!
 git add build && git commit build -m "Rebuild site"
 npm run push-gh-pages
 git push origin master
