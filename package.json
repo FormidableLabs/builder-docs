@@ -8,12 +8,13 @@
     "copy-assets": "cp -r static build/static",
     "copy-cname": "cp CNAME build/CNAME",
     "dev": "webpack-dev-server --port 3000 --config webpack.config.dev.js",
-    "lint": "eslint *.js components/**/*.jsx",
+    "lint-react": "eslint src/**/*.js src/**/*.jsx",
+    "lint-node": "eslint --config .eslint-node ./*.js",
     "open-static": "open http://localhost:8080",
     "push-gh-pages": "git subtree push --prefix build origin gh-pages",
     "reinstall-builder": "rm -rf node_modules/builder && npm install",
     "server-static": "http-server build",
-    "test": "npm run lint",
+    "test": "npm run lint-react && npm run lint-node",
     "webpack-static": "webpack --config webpack.config.static.js --progress --content-base /"
   },
   "repository": {

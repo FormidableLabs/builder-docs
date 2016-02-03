@@ -12,12 +12,12 @@ var OUTPUT_DIR = "build";
 
 // All routes we want to static-render:
 var ROUTES = [
-  "/",
+  "/"
 ];
 
 module.exports = {
   entry: {
-    main: "./components/static-entry.jsx"
+    main: "./src/components/static-entry.jsx"
   },
   output: {
     path: path.join(__dirname, OUTPUT_DIR),

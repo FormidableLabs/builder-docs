@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { renderToString } from "react-dom/server";
 
 import App from "./app";
-import Index from "../templates/index.hbs";
+import Index from "../../templates/index.hbs";
 
 // Run once we hit the client side
 if (typeof document !== "undefined") {

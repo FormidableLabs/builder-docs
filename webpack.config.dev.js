@@ -17,7 +17,7 @@ module.exports = {
   cache: true,
   devtool: "source-map",
   entry: {
-    app: ["./components/entry.jsx"]
+    app: ["./src/components/entry.jsx"]
   },
   stats: {
     colors: true,
@@ -32,9 +32,9 @@ module.exports = {
         test: /\.jsx?$/,
         // Exclude formidable-landers for `npm link` purposes
         exclude: /(node_modules|formidable-landers)/,
-        loader: 'babel',
+        loader: "babel",
         query: {
-          presets: ['react', 'es2015']
+          presets: ["react", "es2015"]
         }
       }, {
         test: /\.hbs$/,
