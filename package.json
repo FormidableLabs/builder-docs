@@ -11,6 +11,8 @@
     "copy-assets": "cp -r static build/static",
     "copy-cname": "cp CNAME build/CNAME",
     "build-static": "npm run reinstall-builder && npm run webpack-static && npm run copy-assets && npm run copy-cname",
+    "server-static": "http-server build",
+    "open-static": "open http://localhost:8080",
     "push-gh-pages": "git subtree push --prefix build origin gh-pages"
   },
   "repository": {
@@ -30,6 +32,7 @@
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.7",
+    "http-server": "^0.8.5",
     "raw-loader": "0.5.1",
     "react": "0.14.5",
     "static-site-generator-webpack-plugin": "2.0.1",
