@@ -10,7 +10,7 @@ class Diagram extends React.Component {
       margin: 0,
       width: 'auto',
       margin: "5em -36px",
-      [settings.mediaQueries.small]: {
+      [settings.mediaQueries.medium]: {
         margin: "initial"
       }
     };
@@ -27,6 +27,10 @@ class Diagram extends React.Component {
         transform: `skewY(${skewDegrees})`,
         margin: "1em 0 2em 0",
 
+        [settings.mediaQueries.medium]: {
+          margin: "initial",
+          transform: "initial"
+        },
         [settings.mediaQueries.small]: {
           margin: "initial",
           transform: "initial"
@@ -37,6 +41,9 @@ class Diagram extends React.Component {
         fontSize: ".777777rem",
         transform: `skewY(-${skewDegrees})`,
 
+        [settings.mediaQueries.medium]: {
+          transform: "initial"
+        },
         [settings.mediaQueries.small]: {
           transform: "initial"
         }
@@ -82,7 +89,7 @@ class Diagram extends React.Component {
       clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)",
       margin: "-5em auto 2em",
 
-      [settings.mediaQueries.small]: {
+      [settings.mediaQueries.medium]: {
         margin: "initial"
       }
     };
@@ -138,6 +145,7 @@ class Diagram extends React.Component {
       <Grid 
         cellWidth="1/3" 
         gutter="0px"
+        mediumCellWidth="1"
         smallCellWidth="1"
         style={this.getRepoLayoutStyles()}
         breakpoints={settings.mediaQueries}
