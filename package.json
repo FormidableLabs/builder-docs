@@ -31,7 +31,7 @@
     "babel-core": "6.3.26",
     "babel-eslint": "^4.1.8",
     "babel-loader": "6.2.1",
-    "builder": "https://github.com/FormidableLabs/builder",
+    "builder": "FormidableLabs/builder",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
     "eslint": "^1.10.3",
