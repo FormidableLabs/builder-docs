@@ -287,9 +287,9 @@ export default {
   /*
    * Big Copy
    */
-   ".Copy--Big": {
-     fontSize: "1.3334em",
-   },
+  ".Copy--Big": {
+    fontSize: "1.3334em"
+  },
   /*
    * Ecology text wrangling
    */
@@ -478,7 +478,7 @@ export default {
         fontSize: "1.125rem"
       },
       ".Copy--Big": {
-        fontSize: "1.3334em",
+        fontSize: "1.3334em"
       },
       ".Copy .highlight": {
         margin: "2em -1.3334em"

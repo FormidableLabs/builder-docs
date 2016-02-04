@@ -1,8 +1,7 @@
 import React from "react";
-import Radium, { Style } from "radium";
+import Radium from "radium";
 
 import settings from "../builder-variables";
-import theme from "../builder-theme";
 
 class Hero extends React.Component {
   getHeroStyles() {
