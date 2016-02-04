@@ -1,5 +1,3 @@
-import {Grid} from "radium-grid";
-
 /* eslint-disable max-len */
 module.exports = {
   // --------
