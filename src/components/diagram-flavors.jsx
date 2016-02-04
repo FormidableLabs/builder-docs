@@ -26,11 +26,11 @@ class Diagram extends React.Component {
         margin: "1em 0 2em 0",
 
         [settings.mediaQueries.medium]: {
-          margin: "0.25em 0",
+          margin: "0.25em 1.5em",
           transform: "initial"
         },
         [settings.mediaQueries.small]: {
-          margin: "0.25em 0",
+          margin: "0.25em 1.5em",
           transform: "initial"
         }
       },
@@ -86,7 +86,10 @@ class Diagram extends React.Component {
       margin: "-5em auto 2em",
 
       [settings.mediaQueries.medium]: {
-        margin: "initial"
+        margin: "-0.5em 2em 2em"
+      },
+      [settings.mediaQueries.small]: {
+        margin: "-0.5em 2em 2em"
       }
     };
   }
