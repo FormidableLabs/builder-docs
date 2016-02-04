@@ -8,10 +8,7 @@ class Diagram extends React.Component {
   getRepoLayoutStyles() {
     return {
       width: "auto",
-      margin: "5em -36px",
-      [settings.mediaQueries.medium]: {
-        margin: "initial"
-      }
+      margin: "5em -36px"
     };
   }
 
@@ -22,28 +19,20 @@ class Diagram extends React.Component {
         width: "100%",
         background: bg,
         color: settings.darkGray,
-        transform: `skewY(${skewDegrees})`,
-        margin: "1em 0 2em 0",
+        margin: "0.25em 1.5em",
 
-        [settings.mediaQueries.medium]: {
-          margin: "0.25em 1.5em",
-          transform: "initial"
-        },
-        [settings.mediaQueries.small]: {
-          margin: "0.25em 1.5em",
-          transform: "initial"
+        [settings.mediaQueries.large]: {
+          margin: "1em 0 2em 0",
+          transform: `skewY(${skewDegrees})`
         }
       },
       content: {
         fontFamily: settings.monospace,
         fontSize: ".777777rem",
-        transform: `skewY(-${skewDegrees})`,
+        transform: "initial",
 
-        [settings.mediaQueries.medium]: {
-          transform: "initial"
-        },
-        [settings.mediaQueries.small]: {
-          transform: "initial"
+        [settings.mediaQueries.large]: {
+          transform: `skewY(-${skewDegrees})`
         }
       }
     };
@@ -83,13 +72,10 @@ class Diagram extends React.Component {
       display: "block",
       width: "100%",
       clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)",
-      margin: "-5em auto 2em",
+      margin: "-0.5em 2em",
 
-      [settings.mediaQueries.medium]: {
-        margin: "-0.5em 2em 2em"
-      },
-      [settings.mediaQueries.small]: {
-        margin: "-0.5em 2em 2em"
+      [settings.mediaQueries.large]: {
+        margin: "-5em auto 2em"
       }
     };
   }
