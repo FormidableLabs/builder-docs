@@ -92,13 +92,13 @@ class Diagram extends React.Component {
     return (
       <ul style={this.getRepoListStyles()}>
         <li>.babelrc</li>
-        <li>.eslintrc-base</li>
-        <li>.eslintrc-client</li>
+        <li>.eslintrc-base</li>
+        <li>.eslintrc-client</li>
         <li>.eslintrc-client-test</li>
-        <li>.eslintrc-server</li>
+        <li>.eslintrc-server</li>
         <li>webpack.config.coverage.js</li>
-        <li>webpack.config.dev.js</li>
-        <li>webpack.config.js</li>
+        <li>webpack.config.dev.js</li>
+        <li>webpack.config.js</li>
         <li>webpack.config.test.js</li>
       </ul>
     );
@@ -159,7 +159,9 @@ class Diagram extends React.Component {
             </div>
           </div>
         </Cell>
-        {this.props.archetype ? this.renderFlavorArchetype() : null}
+        <Cell width="1">
+          {this.props.archetype ? this.renderFlavorArchetype() : null}
+        </Cell>
       </Grid>
     );
   }

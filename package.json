@@ -53,8 +53,8 @@
     "babel-preset-react": "6.3.13",
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.1.4",
-    "radium": "^0.16.2",
-    "radium-grid": "^1.0.4",
+    "radium": "^0.16.6",
+    "radium-grid": "^1.0.7",
     "react-dom": "0.14.5"
   }
 }
