@@ -1,6 +1,5 @@
 import Ecology from "ecology";
 import React from "react";
-import Radium from "radium";
 
 import BuilderREADME from "builder/README.md";
 
@@ -14,4 +13,4 @@ class Docs extends React.Component {
   }
 }
 
-export default Radium(Docs);
+export default Docs;
