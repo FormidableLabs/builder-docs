@@ -159,7 +159,9 @@ class Diagram extends React.Component {
             </div>
           </div>
         </Cell>
-        {this.props.archetype ? this.renderFlavorArchetype() : null}
+        <Cell width="1">
+          {this.props.archetype ? this.renderFlavorArchetype() : null}
+        </Cell>
       </Grid>
     );
   }
