@@ -1,15 +1,23 @@
 import React from "react";
 import Radium, { Style, StyleRoot } from "radium";
+import ga from "react-ga";
+const OutboundLink = ga.OutboundLink;
 
+// Child components
 import Diagram from "./diagram-flavors";
 import Docs from "./docs";
 import Hero from "./hero";
 import { Header, Footer } from "formidable-landers";
 
+// Variables
 import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
+  componentWillMount() {
+    ga.initialize("UA-43290258-1");
+  }
+
   getHeaderLinkStyles() {
     return {
       color: settings.white,
@@ -83,7 +91,7 @@ class App extends React.Component {
                 Archetypes 101
               </h1>
               <p>
-                A builder “archetype” encapsulates shared configuration in a single source of truth. We’ve written archetypes for <a href="https://github.com/FormidableLabs/builder-react-component">React</a> and <a href="https://github.com/FormidableLabs/builder-victory-component">Victory</a> components so far, and we’re actively writing more. You can define an archetype for <strong>any type of application or component</strong>, including Backbone, Angular, and Node.
+                A builder “archetype” encapsulates shared configuration in a single source of truth. We’ve written archetypes for <OutboundLink to="https://github.com/FormidableLabs/builder-react-component" eventLabel="https://github.com/FormidableLabs/builder-react-component">React</OutboundLink> and <OutboundLink to="https://github.com/FormidableLabs/builder-victory-component" eventLabel="https://github.com/FormidableLabs/builder-victory-component">Victory</OutboundLink> components so far, and we’re actively writing more. You can define an archetype for <strong>any type of application or component</strong>, including Backbone, Angular, and Node.
               </p>
               <p>
                 <a href="#archetypes">Learn more about archetypes</a>.
