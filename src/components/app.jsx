@@ -14,7 +14,7 @@ import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     ga.initialize("UA-43290258-1");
   }
 
