@@ -99,10 +99,8 @@ class App extends React.Component {
             </div>
           </section>
           <section className="Container">
-            <div className="Copy">
-              <h1 id="docs" className="Headline">Documentation</h1>
-              <Docs />
-            </div>
+            <h1 id="docs" className="Headline">Documentation</h1>
+            <Docs />
           </section>
         </div>
         <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}>

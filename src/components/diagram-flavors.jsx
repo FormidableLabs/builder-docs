@@ -127,42 +127,44 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", `linear-gradient(90deg, #eee, ${settings.white})`);
 
     return (
-      <Grid
-        cellWidth="1/3"
-        gutter="0px"
-        mediumCellWidth="1"
-        smallCellWidth="1"
-        style={this.getRepoLayoutStyles()}
-        breakpoints={settings.mediaQueries}
-      >
-        <Cell>
-          <div style={firstRepoStyles.wrapper}>
-            <div style={firstRepoStyles.content}>
-              {this.renderFlavorName("strawberry")}
-              {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+      <div className="Diagram">
+        <Grid
+          cellWidth="1/3"
+          gutter="0px"
+          mediumCellWidth="1"
+          smallCellWidth="1"
+          style={this.getRepoLayoutStyles()}
+          breakpoints={settings.mediaQueries}
+        >
+          <Cell>
+            <div style={firstRepoStyles.wrapper}>
+              <div style={firstRepoStyles.content}>
+                {this.renderFlavorName("strawberry")}
+                {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+              </div>
             </div>
-          </div>
-        </Cell>
-        <Cell>
-          <div style={secondRepoStyles.wrapper}>
-            <div style={secondRepoStyles.content}>
-              {this.renderFlavorName("blueberry")}
-              {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+          </Cell>
+          <Cell>
+            <div style={secondRepoStyles.wrapper}>
+              <div style={secondRepoStyles.content}>
+                {this.renderFlavorName("blueberry")}
+                {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+              </div>
             </div>
-          </div>
-        </Cell>
-        <Cell>
-          <div style={thirdRepoStyles.wrapper}>
-            <div style={thirdRepoStyles.content}>
-              {this.renderFlavorName("chocolate")}
-              {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+          </Cell>
+          <Cell>
+            <div style={thirdRepoStyles.wrapper}>
+              <div style={thirdRepoStyles.content}>
+                {this.renderFlavorName("chocolate")}
+                {this.props.archetype ? this.renderBuilderList() : this.renderFlavorsList()}
+              </div>
             </div>
-          </div>
-        </Cell>
-        <Cell width="1">
-          {this.props.archetype ? this.renderFlavorArchetype() : null}
-        </Cell>
-      </Grid>
+          </Cell>
+          <Cell width="1">
+            {this.props.archetype ? this.renderFlavorArchetype() : null}
+          </Cell>
+        </Grid>
+      </div>
     );
   }
 }
