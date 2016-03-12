@@ -4,7 +4,7 @@ module.exports = {
   // Fonts
   // --------
   sansSerif: "'CooperHewitt', 'Franklin Gothic', 'Trade Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-  monospace: "'Source Code Pro', 'Inconsolata', 'Courier New', 'Courier', monospace",
+  monospace: "Consolas, 'Inconsolata', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', 'Courier', monospace",
   // --------
   // Colors
   // --------
@@ -34,6 +34,12 @@ module.exports = {
     medium: "@media only screen and (min-width: 641px)",
     large: "@media only screen and (min-width: 1025px)",
     xlarge: "@media only screen and (min-width: 1441px)"
+  },
+  mediaSizes: {
+    small: "only screen and (max-width: 640px)",
+    medium: "only screen and (min-width: 641px)",
+    large: "only screen and (min-width: 1025px)",
+    xlarge: "only screen and (min-width: 1441px)"
   }
 };
 /* eslint-enable max-len */
