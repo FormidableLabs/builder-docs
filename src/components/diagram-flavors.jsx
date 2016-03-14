@@ -5,9 +5,21 @@ import {Grid, Cell} from "radium-grid";
 import settings from "../builder-variables";
 
 class Diagram extends React.Component {
+  getDiagramStyles() {
+    return {
+      margin: "0 auto",
+      padding: "0 16px",
+      maxWidth: "960px",
+
+      [settings.mediaQueries.large]: {
+        padding: "0 36px",
+        maxWidth: "1260px"
+      }
+    };
+  }
+
   getRepoLayoutStyles() {
     return {
-      width: "auto",
       margin: "5em -36px"
     };
   }
@@ -127,7 +139,7 @@ class Diagram extends React.Component {
     const thirdRepoStyles = this.getRepoStyles("9deg", `linear-gradient(90deg, #eee, ${settings.white})`);
 
     return (
-      <div className="Diagram">
+      <div style={this.getDiagramStyles()}>
         <Grid
           cellWidth="1/3"
           gutter="0px"

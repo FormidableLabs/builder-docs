@@ -1,6 +1,5 @@
 import Ecology from "ecology";
 import React from "react";
-import marked from "marked";
 import Prism from "prismjs";
 /* eslint-disable no-unused-vars */
 // add more language support
@@ -14,7 +13,6 @@ import BuilderREADME from "builder/README.md";
 class Docs extends React.Component {
   componentDidMount() {
     Prism.highlightAll();
-    console.log(Prism.languages);
   }
   render() {
     return (

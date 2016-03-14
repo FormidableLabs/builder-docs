@@ -206,18 +206,13 @@ export default {
   /*
    * Layout/Grid
    */
-   ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
-     paddingLeft: "2%",
-     paddingRight: "2%"
-   },
-   ".Container li > ul, .Container li > ol": {
-     paddingLeft: "1.5em"
-   },
-   ".Diagram": {
-     margin: "0 auto",
-     padding: "0 16px",
-     maxWidth: "960px"
-   },
+  ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+    paddingLeft: "2%",
+    paddingRight: "2%"
+  },
+  ".Container li > ul, .Container li > ol": {
+    paddingLeft: "1.5em"
+  },
   /*
    * Copy
    */
@@ -441,10 +436,6 @@ export default {
       ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
         paddingLeft: "15%",
         paddingRight: "15%"
-      },
-      ".Diagram": {
-        maxWidth: "1260px",
-        padding: "0 36px"
       }
     },
     [settings.mediaSizes.xlarge]: { //xlarge

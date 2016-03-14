@@ -4,7 +4,7 @@ module.exports = {
   // Fonts
   // --------
   sansSerif: "'CooperHewitt', 'Franklin Gothic', 'Trade Gothic', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-  monospace: "Consolas, 'Inconsolata', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', 'Courier', monospace",
+  monospace: "'Source Code Pro', Consolas, 'Inconsolata', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', 'Courier', monospace",
   // --------
   // Colors
   // --------
