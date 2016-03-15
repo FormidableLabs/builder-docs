@@ -18,11 +18,15 @@ class App extends React.Component {
     ga.initialize("UA-43290258-1");
   }
 
-  getHeaderLinkStyles() {
+  getLightLinkStyles() {
     return {
       color: settings.white,
       borderColor: settings.lighterJet,
       ":hover": {
+        color: settings.darkGold,
+        backgroundColor: settings.jet
+      },
+      ":focus": {
         color: settings.darkGold,
         backgroundColor: settings.jet
       }
@@ -54,10 +58,33 @@ class App extends React.Component {
     };
   }
 
+  getFooterSkewStyles() {
+    return {
+      base: {
+        position: "absolute",
+        bottom: "45%",
+        left: "0",
+        right: "0",
+        zIndex: "-1",
+        height: "75%",
+        backgroundColor: settings.jet
+      },
+      right: {
+        background: `linear-gradient(0deg, ${settings.darkerJet}, ${settings.gray}, ${settings.white})`,
+        clipPath: "polygon(100% 0, 0% 100%, 100% 100%)"
+      },
+      left: {
+        background: `linear-gradient(0deg, ${settings.darkerJet}, transparent)`,
+        clipPath: "polygon(0 0, 0% 100%, 100% 100%)"
+      }
+    };
+  }
+
   render() {
+    const footerStyles = this.getFooterSkewStyles();
     return (
       <StyleRoot>
-        <Header backgroundColor={settings.darkerJet} linkStyles={this.getHeaderLinkStyles()} />
+        <Header backgroundColor={settings.darkerJet} linkStyles={this.getLightLinkStyles()} />
         <Hero />
         <div style={this.getMainStyles()}>
           <section style={{position: "relative"}}>
@@ -107,8 +134,23 @@ class App extends React.Component {
             <Docs />
           </section>
         </div>
-        <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}>
+        <Footer
+          backgroundColor={settings.white}
+          logoColor="white"
+          styleOverrides={{
+            margin: "0",
+            padding: "10vmax 0.5rem 3rem 0.5rem",
+            position: "relative",
+            zIndex: "0",
+            color: settings.white,
+            borderTop: "none",
+            background: `linear-gradient(0deg, ${settings.darkerJet} 46%, ${settings.white} 46%)`
+          }}
+          linkStyles={this.getLightLinkStyles()}
+        >
           <p>Builder is a trademark of Formidable Labs, Inc.</p>
+          <div style={[footerStyles.base, footerStyles.right]} />
+          <div style={[footerStyles.base, footerStyles.left]} />
         </Footer>
         <Style rules={theme} />
       </StyleRoot>
