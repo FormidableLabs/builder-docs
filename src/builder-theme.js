@@ -95,7 +95,13 @@ export default {
   },
   "h4, h5, h6": {
     fontSize: "1.25em",
-    fontWeight: 500
+    fontWeight: 500,
+    textTransform: "uppercase",
+    letterSpacing: "0.05em"
+  },
+  "h4 code, h5 code, h6 code": {
+    textTransform: "none",
+    letterSpacing: 0
   },
   "h1,h2,h3,h4": {
     fontFamily: settings.sansSerif,
