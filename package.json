@@ -45,7 +45,7 @@
     "builder": "FormidableLabs/builder",
     "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
-    "formidable-landers": "0.0.7",
+    "formidable-landers": "0.0.12",
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.1.4",
     "prismjs": "^1.4.1",
