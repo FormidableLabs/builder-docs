@@ -21,7 +21,7 @@ export default {
     background: settings.jet,
     fontFamily: settings.sansSerif,
     fontWeight: "300",
-    lineHeight: 1.625,
+    lineHeight: 1.675,
     margin: 0,
     color: settings.darkerJet,
     boxSizing: "border-box"
@@ -67,9 +67,13 @@ export default {
     fontWeight: "bold",
     textAlign: "left"
   },
-  "h1,h2,h3,h4,h5,h6,hgroup, ul,ol,dd, p,figure, pre,table,fieldset,hr, .highlight": {
+  "h1,h2,h3,h4,h5,h6,hgroup": {
+    marginTop: "2.5em",
+    marginBottom: 0
+  },
+  "ul,ol,dd, p,figure, pre,table,fieldset,hr, .highlight, pre": {
     marginTop: "1.5em",
-    marginBottom: "0"
+    marginBottom: 0
   },
   img: {
     maxWidth: "100%"
@@ -90,10 +94,14 @@ export default {
     fontWeight: 300
   },
   "h4, h5, h6": {
-    fontSize: "1em",
+    fontSize: "1.25em",
     fontWeight: 500,
     textTransform: "uppercase",
     letterSpacing: "0.05em"
+  },
+  "h4 code, h5 code, h6 code": {
+    textTransform: "none",
+    letterSpacing: 0
   },
   "h1,h2,h3,h4": {
     fontFamily: settings.sansSerif,
@@ -204,29 +212,20 @@ export default {
   /*
    * Layout/Grid
    */
-  ".Container": {
-    margin: "0 auto",
-    maxWidth: "960px",
-    padding: "0 16px"
+  ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+    paddingLeft: "2%",
+    paddingRight: "2%"
   },
-  ".Row": {
-    padding: "2rem 0"
-  },
-  ".Row .Interactive": {
-    marginTop: "-1.3334rem"
+  ".Container li > ul, .Container li > ol": {
+    paddingLeft: "1.5em"
   },
   /*
    * Copy
    */
   ".Copy": {
     margin: "0 auto",
-    maxWidth: "720px",
-    padding: "0",
     fontSmoothing: "antialiased",
     fontSize: "1rem"
-  },
-  ".Copy p, .Copy ul, .Ecology ul": {
-    paddingRight: "0"
   },
   ".Tagline": {
     textAlign: "left"
@@ -237,7 +236,7 @@ export default {
   },
   ".Copy .highlight pre": {
     marginTop: 0,
-    background: settings.jet,
+    background: settings.gold,
     color: "#fff",
     fontFamily: settings.monospace,
     fontSize: "1em",
@@ -273,12 +272,14 @@ export default {
   },
   ".Copy code, .Ecology code, .Focus code": {
     background: "rgba(135, 135, 135, 0.1)",
-    color: settings.jet,
     fontFamily: settings.monospace,
-    fontSize: "0.925em",
+    fontSize: "0.8625em",
     borderRadius: "3px",
     padding: "0 5px",
     display: "inline-block"
+  },
+  ".Copy pre code, .Ecology pre code": {
+    fontSize: "1rem"
   },
   ".highlight code": {
     background: "transparent",
@@ -295,7 +296,7 @@ export default {
    */
   ".Overview pre": {
     background: "rgba(135, 135, 135, 0.1)",
-    padding: "0.25em 0.5em",
+    padding: "1em 0.5em",
     overflowX: "scroll" // bring back scrollbars for readme.md
   },
   ".Overview pre code": {
@@ -410,7 +411,7 @@ export default {
     marginTop: 0
   },
   mediaQueries: {
-    "only screen and (min-width: 32em)": { //medium
+    [settings.mediaSizes.medium]: { //medium
       h1: {
         fontSize: "2.5em"
       },
@@ -432,14 +433,18 @@ export default {
       ".Headline--major": {
         fontSize: "2.75em"
       },
-      ".Copy, .Tagline": {
-        paddingLeft: "48px"
-      },
-      ".Copy p, .Copy ul, .Ecology ul": {
-        paddingRight: "48px"
+      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+        paddingLeft: "5%",
+        paddingRight: "5%"
       }
     },
-    "only screen and (min-width: 60em)": { //xlarge
+    [settings.mediaSizes.large]: {
+      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+        paddingLeft: "15%",
+        paddingRight: "15%"
+      }
+    },
+    [settings.mediaSizes.xlarge]: { //xlarge
       html: {
         fontSize: "18px"
       },
@@ -464,17 +469,11 @@ export default {
         paddingTop: "65px",
         paddingBottom: "0"
       },
-      ".Container": {
-        maxWidth: "1260px",
-        padding: "0 36px"
+      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+        paddingLeft: "25%",
+        paddingRight: "25%"
       },
-      ".Copy, .Tagline": {
-        padding: "0 0 0 60px"
-      },
-      ".Copy p, .Copy ul, .Ecology ul": {
-        paddingRight: "60px"
-      },
-      ".Copy, .Ecology p": {
+      ".Copy, .Ecology p, .Ecology li": {
         fontSize: "1.125rem"
       },
       ".Copy--Big": {

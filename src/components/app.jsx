@@ -71,13 +71,17 @@ class App extends React.Component {
                   <code>npm</code> is great for controlling a single repository’s dependencies and tasks. But what if you need <strong>shared infrastructure and configuration across multiple repos</strong>?
                 </p>
               </div>
-              <Diagram />
+            </div>
+            <Diagram />
+            <div className="Container">
               <div className="Copy Copy--Big">
                 <p>
                   Builder is a meta tool for controlling npm workflows. If you’re working on multiple similar repos, it allows you to <strong>define tasks and dependencies in a single shared source of truth</strong>.
                 </p>
               </div>
-              <Diagram archetype />
+            </div>
+            <Diagram archetype />
+            <div className="Container">
               <div className="Copy Copy--Big">
                 <p>
                   Or, if you’re working in a single repo, it allows you to dramatically simplify your <code>package.json</code>. Either way, it keeps you close to vanilla npm—you don’t need to buy into a whole new build philosophy to start benefiting from builder today.
@@ -99,10 +103,8 @@ class App extends React.Component {
             </div>
           </section>
           <section className="Container">
-            <div className="Copy">
-              <h1 id="docs" className="Headline">Documentation</h1>
-              <Docs />
-            </div>
+            <h1 id="docs" className="Headline">Documentation</h1>
+            <Docs />
           </section>
         </div>
         <Footer backgroundColor={settings.darkGray} styleOverrides={{margin: "0"}}>
