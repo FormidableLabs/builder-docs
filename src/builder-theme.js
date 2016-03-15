@@ -67,11 +67,11 @@ export default {
     fontWeight: "bold",
     textAlign: "left"
   },
-  "h1,h2,h3,h4,h5,h6,hgroup": {
+  "h1, h2, h3, h4, h5, h6, hgroup": {
     marginTop: "2.5em",
     marginBottom: 0
   },
-  "ul,ol,dd, p,figure, pre,table,fieldset,hr, .highlight, pre": {
+  "ul, ol, dd, p, figure, pre, table, fieldset, hr, .highlight, pre": {
     marginTop: "1.5em",
     marginBottom: 0
   },
@@ -103,7 +103,7 @@ export default {
     textTransform: "none",
     letterSpacing: 0
   },
-  "h1,h2,h3,h4": {
+  "h1, h2, h3, h4": {
     fontFamily: settings.sansSerif,
     lineHeight: 1.3
   },
