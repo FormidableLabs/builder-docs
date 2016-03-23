@@ -5,9 +5,10 @@
   "main": "webpack.config.dev.js",
   "scripts": {
     "build-static": "builder run update-readme && builder run webpack-static && builder run copy-assets && builder run copy-cname",
-
     "copy-cname": "cp CNAME build/CNAME",
-    "push-gh-pages": "git subtree push --prefix build origin gh-pages"
+    "push-gh-pages": "git subtree push --prefix build origin gh-pages",
+    "test": "builder run lint",
+    "start": "builder run dev"
   },
   "repository": {
     "type": "git",
@@ -20,16 +21,10 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "babel-eslint": "^4.1.8",
-    "eslint": "^1.10.3",
-    "eslint-config-defaults": "^8.0.2",
-    "eslint-plugin-filenames": "^0.2.0",
-    "eslint-plugin-flow-vars": "^0.1.3",
-    "eslint-plugin-react": "^3.16.1",
-    "http-server": "^0.8.5",
-    "webpack-dev-server": "1.14.0"
+    "builder-docs-archetype-dev": "latest"
   },
   "dependencies": {
+    "builder-docs-archetype": "latest",
     "builder": "FormidableLabs/builder",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.12",
