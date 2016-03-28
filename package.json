@@ -4,7 +4,7 @@
   "description": "Marketing/documentation site for Builder",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "build-static": "builder run update-readme && builder run webpack-static && builder run copy-assets && builder run copy-cname",
+    "build-static": "npm update builder && builder run webpack-static && builder run copy-assets && builder run copy-cname",
     "copy-cname": "cp CNAME build/CNAME",
     "push-gh-pages": "git subtree push --prefix build origin gh-pages",
     "test": "builder run lint",
@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "builder-docs-archetype-dev": "0.0.3"
+    "builder-docs-archetype-dev": "0.0.4"
   },
   "dependencies": {
-    "builder-docs-archetype": "0.0.3",
+    "builder-docs-archetype": "0.0.4",
     "builder": "FormidableLabs/builder",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.12",
