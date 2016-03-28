@@ -4,18 +4,11 @@
   "description": "Marketing/documentation site for Builder",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "build-static": "npm run reinstall-builder && npm run webpack-static && npm run copy-assets && npm run copy-cname",
-    "copy-assets": "cp -r static build/static",
+    "build-static": "npm update builder && builder run webpack-static && builder run copy-assets && builder run copy-cname",
     "copy-cname": "cp CNAME build/CNAME",
-    "dev": "webpack-dev-server --port 3000 --config webpack.config.dev.js",
-    "lint-react": "eslint src/**/*.js src/**/*.jsx",
-    "lint-node": "eslint --config .eslint-node ./*.js",
-    "open-static": "open http://localhost:8080",
     "push-gh-pages": "git subtree push --prefix build origin gh-pages",
-    "reinstall-builder": "rm -rf node_modules/builder && npm install",
-    "server-static": "http-server build",
-    "test": "npm run lint-react && npm run lint-node",
-    "webpack-static": "webpack --config webpack.config.static.js --progress --content-base /"
+    "test": "builder run lint",
+    "start": "builder run dev"
   },
   "repository": {
     "type": "git",
@@ -28,35 +21,18 @@
   },
   "homepage": "https://github.com/FormidableLabs/builder-docs#readme",
   "devDependencies": {
-    "babel-eslint": "^4.1.8",
-    "eslint": "^1.10.3",
-    "eslint-config-defaults": "^8.0.2",
-    "eslint-plugin-filenames": "^0.2.0",
-    "eslint-plugin-flow-vars": "^0.1.3",
-    "eslint-plugin-react": "^3.16.1",
-    "http-server": "^0.8.5",
-    "webpack-dev-server": "1.14.0"
+    "builder-docs-archetype-dev": "0.0.4"
   },
   "dependencies": {
-    "babel-core": "6.3.26",
-    "babel-loader": "6.2.1",
-    "babel-preset-es2015": "6.3.13",
-    "babel-preset-react": "6.3.13",
+    "builder-docs-archetype": "0.0.4",
     "builder": "FormidableLabs/builder",
-    "clean-webpack-plugin": "0.1.5",
     "ecology": "1.0.4",
     "formidable-landers": "0.0.12",
-    "handlebars": "^4.0.5",
-    "handlebars-loader": "^1.1.4",
     "prismjs": "^1.4.1",
     "radium": "^0.16.6",
     "radium-grid": "^1.0.9",
-    "raw-loader": "0.5.1",
     "react": "0.14.5",
     "react-dom": "0.14.5",
-    "react-ga": "^1.2.0",
-    "static-site-generator-webpack-plugin": "2.0.1",
-    "webpack": "1.12.9",
-    "webpack-stats-plugin": "0.1.1"
+    "react-ga": "^1.2.0"
   }
 }
