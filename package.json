@@ -4,9 +4,7 @@
   "description": "Marketing/documentation site for Builder",
   "main": "webpack.config.dev.js",
   "scripts": {
-    "build-static": "npm update builder && builder run webpack-static && builder run copy-assets && builder run copy-cname",
-    "copy-cname": "cp CNAME build/CNAME",
-    "push-gh-pages": "git subtree push --prefix build origin gh-pages",
+    "build-static": "npm update builder && builder run webpack-static && builder run copy-assets",
     "test": "builder run lint",
     "start": "builder run dev"
   },
