@@ -17,7 +17,7 @@ export default {
     fontSize: "17px"
   },
   body: {
-    backgroundColor: settings.jet,
+    background: settings.jet,
     fontFamily: settings.sansSerif,
     fontWeight: "300",
     lineHeight: 1.675,
@@ -159,12 +159,12 @@ export default {
     color: settings.jet,
     fontWeight: "500",
     textDecoration: "none",
-    backgroundColor: "transparent",
+    background: "transparent",
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
   "a:hover, a:focus": {
-    backgroundColor: settings.gold,
+    background: settings.gold,
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
@@ -178,7 +178,7 @@ export default {
    * Buttons!
    */
   ".Button": {
-    backgroundColor: "transparent",
+    background: "transparent",
     border: `3px solid ${settings.gray}`,
     boxShadow: "none",
     color: settings.jet,
@@ -196,14 +196,14 @@ export default {
     transition: "color 0.2s ease, border-color 0.7s ease"
   },
   ".Button--spotlight": {
-    backgroundColor: settings.jet,
+    background: settings.jet,
     borderColor: settings.jet,
     color: settings.gray,
     fontSize: "1.25rem",
     transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
   },
   ".Button--spotlight:hover, .Button--spotlight:focus": {
-    backgroundColor: settings.red,
+    background: settings.red,
     borderColor: settings.red,
     color: "#ffffff",
     transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
@@ -235,7 +235,7 @@ export default {
   },
   ".Copy .highlight pre": {
     marginTop: 0,
-    backgroundColor: settings.gold,
+    background: settings.gold,
     color: "#fff",
     fontFamily: settings.monospace,
     fontSize: "1em",
@@ -270,7 +270,7 @@ export default {
     marginBottom: "0.25em"
   },
   ".Copy code, .Ecology code, .Focus code": {
-    backgroundColor: "rgba(135, 135, 135, 0.1)",
+    background: "rgba(135, 135, 135, 0.1)",
     fontFamily: settings.monospace,
     fontSize: "0.8625em",
     borderRadius: "3px",
@@ -281,7 +281,7 @@ export default {
     fontSize: "1rem"
   },
   ".highlight code": {
-    backgroundColor: "transparent",
+    background: "transparent",
     padding: 0
   },
   /*
@@ -294,12 +294,12 @@ export default {
    * Ecology text wrangling
    */
   ".Overview pre": {
-    backgroundColor: "rgba(135, 135, 135, 0.1)",
+    background: "rgba(135, 135, 135, 0.1)",
     padding: "1em 0.5em",
     overflowX: "scroll" // bring back scrollbars for readme.md
   },
   ".Overview pre code": {
-    backgroundColor: "none"
+    background: "none"
   },
   /*
    * Interactive/Component Playground
@@ -326,7 +326,7 @@ export default {
   ".Interactive .playgroundCode": {
     flex: "0 0 100%",
     verticalAlign: "top",
-    backgroundColor: "#fff",
+    background: "#fff",
     fontFamily: settings.monospace,
     fontSize: "1rem",
     lineHeight: 1.2,
@@ -337,7 +337,7 @@ export default {
   ".Interactive .playgroundPreview": {
     flex: "0 0 100%",
     verticalAlign: "top",
-    backgroundColor: "#fff",
+    background: "#fff",
     position: "relative",
     border: "1px solid #ebe3db"
   },

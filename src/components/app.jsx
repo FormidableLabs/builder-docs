@@ -135,7 +135,7 @@ class App extends React.Component {
           </section>
         </div>
         <Footer
-          background={settings.white}
+          backgroundColor={settings.white}
           logoColor="white"
           styleOverrides={{
             margin: "0",
