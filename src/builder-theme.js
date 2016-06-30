@@ -17,8 +17,7 @@ export default {
     fontSize: "17px"
   },
   body: {
-    backgroundColor: settings.white,
-    background: settings.jet,
+    backgroundColor: settings.jet,
     fontFamily: settings.sansSerif,
     fontWeight: "300",
     lineHeight: 1.675,
@@ -236,7 +235,7 @@ export default {
   },
   ".Copy .highlight pre": {
     marginTop: 0,
-    background: settings.gold,
+    backgroundColor: settings.gold,
     color: "#fff",
     fontFamily: settings.monospace,
     fontSize: "1em",
@@ -271,7 +270,7 @@ export default {
     marginBottom: "0.25em"
   },
   ".Copy code, .Ecology code, .Focus code": {
-    background: "rgba(135, 135, 135, 0.1)",
+    backgroundColor: "rgba(135, 135, 135, 0.1)",
     fontFamily: settings.monospace,
     fontSize: "0.8625em",
     borderRadius: "3px",
@@ -282,7 +281,7 @@ export default {
     fontSize: "1rem"
   },
   ".highlight code": {
-    background: "transparent",
+    backgroundColor: "transparent",
     padding: 0
   },
   /*
@@ -295,12 +294,12 @@ export default {
    * Ecology text wrangling
    */
   ".Overview pre": {
-    background: "rgba(135, 135, 135, 0.1)",
+    backgroundColor: "rgba(135, 135, 135, 0.1)",
     padding: "1em 0.5em",
     overflowX: "scroll" // bring back scrollbars for readme.md
   },
   ".Overview pre code": {
-    background: "none"
+    backgroundColor: "none"
   },
   /*
    * Interactive/Component Playground
@@ -327,7 +326,7 @@ export default {
   ".Interactive .playgroundCode": {
     flex: "0 0 100%",
     verticalAlign: "top",
-    background: "#fff",
+    backgroundColor: "#fff",
     fontFamily: settings.monospace,
     fontSize: "1rem",
     lineHeight: 1.2,
@@ -338,7 +337,7 @@ export default {
   ".Interactive .playgroundPreview": {
     flex: "0 0 100%",
     verticalAlign: "top",
-    background: "#fff",
+    backgroundColor: "#fff",
     position: "relative",
     border: "1px solid #ebe3db"
   },

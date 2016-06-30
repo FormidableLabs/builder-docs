@@ -24,11 +24,11 @@ class App extends React.Component {
       borderColor: settings.lighterJet,
       ":hover": {
         color: settings.darkGold,
-        backgroundColor: settings.jet
+        background: settings.jet
       },
       ":focus": {
         color: settings.darkGold,
-        backgroundColor: settings.jet
+        background: settings.jet
       }
     };
   }
@@ -67,7 +67,7 @@ class App extends React.Component {
         right: "0",
         zIndex: "-1",
         height: "75%",
-        backgroundColor: settings.jet
+        background: settings.jet
       },
       right: {
         background: `linear-gradient(0deg, ${settings.darkerJet}, ${settings.gray}, ${settings.white})`,
@@ -135,7 +135,7 @@ class App extends React.Component {
           </section>
         </div>
         <Footer
-          backgroundColor={settings.white}
+          background={settings.white}
           logoColor="white"
           styleOverrides={{
             margin: "0",
