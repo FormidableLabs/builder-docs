@@ -74,8 +74,7 @@ class Diagram extends React.Component {
   getFlavorArchetypeStyles() {
     return {
       zIndex: "1",
-
-      backgroundColor: settings.gray,
+      background: settings.gray,
       color: settings.darkerJet,
       fontFamily: settings.monospace,
       fontSize: ".777777rem",

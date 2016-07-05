@@ -23,7 +23,7 @@ class Hero extends React.Component {
       height: "120%",
       transformOrigin: "top left",
       transform: "skew(0deg, 15deg)",
-      backgroundColor: settings.jet
+      background: settings.jet
     };
   }
 
@@ -38,7 +38,7 @@ class Hero extends React.Component {
 
   getInstallerHeadingStyles() {
     return {
-      backgroundColor: settings.gold,
+      background: settings.gold,
       border: `1px solid ${settings.darkGold}`,
       color: settings.jet,
       display: "inline-block",
