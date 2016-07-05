@@ -26,13 +26,13 @@
   "dependencies": {
     "builder-docs-archetype": "0.0.4",
     "builder": "FormidableLabs/builder",
-    "ecology": "1.0.4",
+    "ecology": "1.5.0",
     "formidable-landers": "^2.1.0",
     "prismjs": "^1.4.1",
-    "radium": "^0.16.6",
+    "radium": "^0.17.1",
     "radium-grid": "^1.0.9",
-    "react": "0.14.5",
-    "react-dom": "0.14.5",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
     "react-ga": "^1.2.0"
   }
 }
