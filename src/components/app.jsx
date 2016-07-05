@@ -84,7 +84,7 @@ class App extends React.Component {
     const footerStyles = this.getFooterSkewStyles();
     return (
       <StyleRoot>
-        <Header backgroundColor={settings.darkerJet} linkStyles={this.getLightLinkStyles()} />
+        <Header background={settings.darkerJet} linkStyles={this.getLightLinkStyles()} />
         <Hero />
         <div style={this.getMainStyles()}>
           <section style={{position: "relative"}}>
@@ -135,7 +135,7 @@ class App extends React.Component {
           </section>
         </div>
         <Footer
-          backgroundColor={settings.white}
+          background={settings.white}
           logoColor="white"
           styleOverrides={{
             margin: "0",
