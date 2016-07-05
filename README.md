@@ -22,11 +22,11 @@ Once your PR is merged into `master`, Travis will automatically build and deploy
 
 # Travis
 
-Server access is possible by storing the key on travis and encrypting the file here, `deploy_static.pem.enc`. This is done with by:
+Server access is possible by storing the key on travis and encrypting the file here, `deploy_static.pem.enc`. This is done with the travis gem:
 
 ```
 gem install travis
 travis encrypt-file ~/.ssh/deploy_static.pem --add
 ```
 
-Note: Make sure the travis config does not preserve the `~/.ssh/` filepath. 
+Note: Make sure the travis config does not preserve the `~/.ssh/` filepath.
