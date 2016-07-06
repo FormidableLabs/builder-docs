@@ -25,12 +25,12 @@
     "builder-docs-archetype": "^1.0.5",
     "builder": "FormidableLabs/builder",
     "ecology": "^1.5.0",
-    "formidable-landers": "^1.1.0",
+    "formidable-landers": "^3.0.0",
     "prismjs": "^1.4.1",
-    "radium": "^0.16.6",
+    "radium": "^0.17.1",
     "radium-grid": "^1.0.9",
-    "react": "0.14.5",
-    "react-dom": "0.14.5",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
     "react-ga": "^1.2.0"
   }
 }

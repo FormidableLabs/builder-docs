@@ -17,7 +17,6 @@ export default {
     fontSize: "17px"
   },
   body: {
-    backgroundColor: settings.white,
     background: settings.jet,
     fontFamily: settings.sansSerif,
     fontWeight: "300",
@@ -160,12 +159,12 @@ export default {
     color: settings.jet,
     fontWeight: "500",
     textDecoration: "none",
-    backgroundColor: "transparent",
+    background: "transparent",
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
   "a:hover, a:focus": {
-    backgroundColor: settings.gold,
+    background: settings.gold,
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
@@ -179,7 +178,7 @@ export default {
    * Buttons!
    */
   ".Button": {
-    backgroundColor: "transparent",
+    background: "transparent",
     border: `3px solid ${settings.gray}`,
     boxShadow: "none",
     color: settings.jet,
@@ -197,14 +196,14 @@ export default {
     transition: "color 0.2s ease, border-color 0.7s ease"
   },
   ".Button--spotlight": {
-    backgroundColor: settings.jet,
+    background: settings.jet,
     borderColor: settings.jet,
     color: settings.gray,
     fontSize: "1.25rem",
     transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
   },
   ".Button--spotlight:hover, .Button--spotlight:focus": {
-    backgroundColor: settings.red,
+    background: settings.red,
     borderColor: settings.red,
     color: "#ffffff",
     transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
