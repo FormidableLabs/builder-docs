@@ -1,4 +1,4 @@
-builder.formidable.com
+Builder Documentation
 ======================
 
 [![Build Status](https://travis-ci.org/FormidableLabs/builder-docs.svg?branch=master)](https://travis-ci.org/FormidableLabs/builder-docs)
