@@ -52,7 +52,7 @@ class App extends React.Component {
       zIndex: "0",
       position: "relative",
       margin: "0",
-      padding: "0 0 2em 0",
+      padding: "0 0 5em 0",
       width: "100%",
       background: settings.white
     };
@@ -71,11 +71,13 @@ class App extends React.Component {
       },
       right: {
         background: `linear-gradient(0deg, ${settings.darkerJet}, ${settings.gray}, ${settings.white})`,
-        clipPath: "polygon(100% 0, 0% 100%, 100% 100%)"
+        clipPath: "polygon(100% 0, 0% 100%, 100% 100%)",
+        WebkitClipPath: "polygon(100% 0, 0% 100%, 100% 100%)"
       },
       left: {
         background: `linear-gradient(0deg, ${settings.darkerJet}, transparent)`,
-        clipPath: "polygon(0 0, 0% 100%, 100% 100%)"
+        clipPath: "polygon(0 0, 0% 100%, 100% 100%)",
+        WebkitClipPath: "polygon(0 0, 0% 100%, 100% 100%)"
       }
     };
   }
@@ -138,7 +140,7 @@ class App extends React.Component {
           background={settings.white}
           logoColor="white"
           styleOverrides={{
-            margin: "0",
+            margin: "0px",
             padding: "10vmax 0.5rem 3rem 0.5rem",
             position: "relative",
             zIndex: "0",
