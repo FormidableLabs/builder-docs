@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Capture which build we are. Travis provides in the form of:
 # `GLOBAL_NUMBER.SUBBUILD_NUMBER`. We're going to want the subbuild number
