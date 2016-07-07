@@ -6,7 +6,7 @@
 BUILD_SUFFIX=$(echo $TRAVIS_JOB_NUMBER | egrep -o "\.\d$")
 
 # Early exit if we aren't the first build.
-if [ ${BUILD_SUFFIX} != ".1" ]; then
+if [ "$BUILD_SUFFIX" != ".1" ]; then
 	echo "Build number: $TRAVIS_JOB_NUMBER. Skipping deployment."
 	exit 0
 fi
