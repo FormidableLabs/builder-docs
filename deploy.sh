@@ -11,8 +11,8 @@ echo "BUILD_SUFFIX: $BUILD_SUFFIX"
 
 # Early exit if we aren't the first build.
 if [[ "$BUILD_SUFFIX" != "1" ]]; then
-	echo "Build number: $TRAVIS_JOB_NUMBER. Skipping deployment."
-	exit 0
+  echo "Build number: $TRAVIS_JOB_NUMBER. Skipping deployment."
+  exit 0
 fi
 
 # Otherwise, continue and do the actual deploy.
