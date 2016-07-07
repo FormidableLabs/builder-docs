@@ -22,16 +22,23 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   # Install npmv3 because of postinstall bugs in npmv2:
   # See https://github.com/FormidableLabs/victory/issues/98
-  - npm install -g npm@3
+  # TODO REENABLE
+  # - npm install -g npm@3
+
+# TODO REMOVE -- Skip install for experiments!
+install: true
 
 script:
-  - npm test
-  - NODE_ENV=production node_modules/.bin/builder run build-static
+  - echo "TODO REENABLE npm test"
+  - echo "TODO REENABLE NODE_ENV=production node_modules/.bin/builder run build-static"
+  - echo "TODO REMOVE RUNNING DEPLOY SCRIPT IN PR MANUALLY"
+  - ./deploy.sh
 
 # Once build on Travis is working, automatically deploy it on master only:
 deploy:
   skip_cleanup: true
   provider: script
   script: ./deploy.sh
-  on:
-    branch: master
+  # TODO REENABLE
+  # on:
+  #   branch: master
