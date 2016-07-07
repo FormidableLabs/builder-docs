@@ -5,7 +5,7 @@
 # so that we can detect the "first" vs. "other" builds.
 #
 # Bash hackery reference for `##*.` thing:
-#
+# http://tecadmin.net/how-to-extract-filename-extension-in-shell-script/#
 BUILD_SUFFIX=${TRAVIS_JOB_NUMBER##*.}
 echo "BUILD_SUFFIX: $BUILD_SUFFIX"
 
