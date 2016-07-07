@@ -1,5 +1,19 @@
 #!/bin/sh
 
+# Capture which build we are. Travis provides in the form of:
+# `GLOBAL_NUMBER.SUBBUILD_NUMBER`. We're going to want the subbuild number
+# so that we can detect the "first" vs. "other" builds.
+BUILD_SUFFIX=$(echo $TRAVIS_JOB_NUMBER | egrep -o "\.\d$")
+
+# Early exit if we aren't the first build.
+if [ ${BUILD_SUFFIX} != ".1" ]; then
+	echo "Build number: $TRAVIS_JOB_NUMBER. Skipping deployment."
+	exit 0
+fi
+
+# Otherwise, continue and do the actual deploy.
+echo "Build number: $TRAVIS_JOB_NUMBER. Starting deployment."
+
 echo "TRAVIS_BUILD_ID: ${TRAVIS_BUILD_ID}"
 echo "TRAVIS_BUILD_NUMBER: ${TRAVIS_BUILD_NUMBER}"
 echo "TRAVIS_JOB_ID: ${TRAVIS_JOB_ID}"
