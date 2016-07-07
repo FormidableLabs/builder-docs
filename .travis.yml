@@ -31,6 +31,8 @@ install: true
 script:
   - echo "TODO REENABLE npm test"
   - echo "TODO REENABLE NODE_ENV=production node_modules/.bin/builder run build-static"
+  - echo "TODO REMOVE RUNNING DEPLOY SCRIPT IN PR MANUALLY"
+  - ./deploy.sh
 
 # Once build on Travis is working, automatically deploy it on master only:
 deploy:
