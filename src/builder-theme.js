@@ -14,7 +14,7 @@ export default {
   },
   html: {
     textSizeAdjust: "100%",
-    fontSize: "17px"
+    fontSize: "18px"
   },
   body: {
     background: settings.jet,
@@ -70,7 +70,7 @@ export default {
     marginTop: "2.5em",
     marginBottom: 0
   },
-  "ul, ol, dd, p, figure, pre, table, fieldset, hr, .highlight, pre": {
+  "dd, p, figure, pre, table, fieldset, hr, .highlight, pre": {
     marginTop: "1.5em",
     marginBottom: 0
   },
@@ -113,9 +113,11 @@ export default {
     fontStyle: "italic"
   },
   "ul": {
+    marginTop: "0.5em",
     padding: "0"
   },
   "ol": {
+    marginTop: "0.5em",
     padding: "0 0 0 1.5em"
   },
   "li": {
@@ -124,6 +126,9 @@ export default {
   },
   "ul > li": {
     listStyle: "none"
+  },
+  "ol > li": {
+    paddingLeft: "1em"
   },
   /*
    * Headlines/Headings
@@ -134,16 +139,6 @@ export default {
     fontSize: "2.125em",
     fontWeight: 200, // Light
     lineHeight: 1.3
-  },
-  ".Headline--minor": {
-    fontSize: "2em",
-    fontWeight: 300
-  },
-  ".Headline--major": {
-    fontSize: "2.5em",
-    fontWeight: 200, // Light
-    lineHeight: 1.3,
-    fontStyle: "italic"
   },
   ".Smallcaps": {
     textTransform: "uppercase",
@@ -168,52 +163,12 @@ export default {
     borderBottom: `3px solid ${settings.gold}`,
     transition: "all 0.5s ease"
   },
-  ".Link--unstyled": {
-    borderBottom: "none"
-  },
-  ".Link--unstyled:hover, .Link--unstyled:focus": {
-    borderBottom: "none"
-  },
-  /*
-   * Buttons!
-   */
-  ".Button": {
-    background: "transparent",
-    border: `3px solid ${settings.gray}`,
-    boxShadow: "none",
-    color: settings.jet,
-    fontFamily: settings.sansSerif,
-    fontWeight: "normal",
-    padding: "0.75em 1.25em",
-    textAlign: "center",
-    transition: "color 0.2s ease, border-color 0.7s ease"
-  },
-  ".Button:hover, .Button:focus": {
-    borderColor: settings.palestRed,
-    boxShadow: "none",
-    color: settings.red,
-    outline: "none",
-    transition: "color 0.2s ease, border-color 0.7s ease"
-  },
-  ".Button--spotlight": {
-    background: settings.jet,
-    borderColor: settings.jet,
-    color: settings.gray,
-    fontSize: "1.25rem",
-    transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
-  },
-  ".Button--spotlight:hover, .Button--spotlight:focus": {
-    background: settings.red,
-    borderColor: settings.red,
-    color: "#ffffff",
-    transition: "color 0.2s ease, background-color 0.7s ease, border-color 0.7s ease"
-  },
   /*
    * Layout/Grid
    */
-  ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
-    paddingLeft: "2%",
-    paddingRight: "2%"
+  ".Container": {
+    paddingLeft: "3%",
+    paddingRight: "3%"
   },
   ".Container li > ul, .Container li > ol": {
     paddingLeft: "1.5em"
@@ -243,18 +198,18 @@ export default {
     overflow: "auto",
     padding: "1em"
   },
-  ".Copy ul, .Ecology ul": {
+  ".Copy ul": {
     paddingLeft: "1.5em",
     listStyle: "none"
   },
-  ".Copy ul > li, .Ecology ul > li": {
+  ".Copy ul > li": {
     position: "relative"
   },
-  ".Copy ul > li + li, .Ecology ul > li + li": {
+  ".Copy ul > li + li": {
     marginTop: "0.25em"
   },
-  ".Copy ul > li:before, .Ecology ul > li:before": {
-    content: "''",
+  ".Copy ul > li:before": {
+    content: "",
     width: "1em",
     height: "1em",
     display: "block",
@@ -265,20 +220,17 @@ export default {
     left: "-24px",
     top: "11px"
   },
-  ".Copy li > ul, .Ecology li > ul": {
+  ".Copy li > ul": {
     marginTop: 0,
     marginBottom: "0.25em"
   },
-  ".Copy code, .Ecology code, .Focus code": {
+  ".Copy code, .Focus code": {
     background: "rgba(135, 135, 135, 0.1)",
     fontFamily: settings.monospace,
     fontSize: "0.8625em",
     borderRadius: "3px",
     padding: "0 5px",
     display: "inline-block"
-  },
-  ".Copy pre code, .Ecology pre code": {
-    fontSize: "1rem"
   },
   ".highlight code": {
     background: "transparent",
@@ -288,126 +240,24 @@ export default {
    * Big Copy
    */
   ".Copy--Big": {
-    fontSize: "1.3334em"
+    fontSize: "1.2223em"
   },
   /*
-   * Ecology text wrangling
+   * Markdown File text wrangling
    */
+  ".Overview p, .Overview li": {
+    maxWidth: "38em"
+  },
   ".Overview pre": {
     background: "rgba(135, 135, 135, 0.1)",
+    marginRight: "-20px",
     padding: "1em 0.5em",
-    overflowX: "scroll" // bring back scrollbars for readme.md
+    overflowX: "scroll", // bring back scrollbars for readme.md
+    width: "100%"
   },
   ".Overview pre code": {
-    background: "none"
-  },
-  /*
-   * Interactive/Component Playground
-   */
-  ".Interactive": {
-    minHeight: "333px"
-  },
-  ".Interactive .playground": {
-    display: "flex",
-    flexWrap: "wrap",
-    marginTop: "1.3334em"
-  },
-  ".Interactive:before, .Interactive .playgroundPreview:before": {
-    fontFamily: settings.sansSerif,
-    fontWeight: "bold",
-    fontSize: "1rem",
-    lineHeight: 1,
-    letterSpacing: "0.05em",
-    textTransform: "uppercase"
-  },
-  ".Interactive:before": {
-    content: "'Interactive Code'"
-  },
-  ".Interactive .playgroundCode": {
-    flex: "0 0 100%",
-    verticalAlign: "top",
-    background: "#fff",
-    fontFamily: settings.monospace,
-    fontSize: "1rem",
-    lineHeight: 1.2,
-    marginTop: "1.66666em",
-    padding: "0.88888em 0.88888em 0 0.88888em",
-    border: "1px solid #ebe3db"
-  },
-  ".Interactive .playgroundPreview": {
-    flex: "0 0 100%",
-    verticalAlign: "top",
-    background: "#fff",
-    position: "relative",
-    border: "1px solid #ebe3db"
-  },
-  ".Interactive .playgroundPreview:before": {
-    content: "'Live Preview'",
-    position: "absolute",
-    top: "-18px"
-  },
-  ".Interactive pre, .CodeMirror-code": {
-    fontFamily: settings.monospace,
-    fontSize: "1rem",
-    lineHeight: 1.2
-  },
-  ".CodeMirror": {
-    height: "auto"
-  },
-  /*
-   * Documentation/Props
-   */
-  ".Documentation h1, .Documentation h2, .Documentation h3": {
-    fontFamily: settings.sansSerif,
-    fontWeight: "normal"
-  },
-  ".Prop td:first-child": {
-    maxWidth: "30em"
-  },
-  ".Prop-name": {
-    fontFamily: settings.monospace
-  },
-  ".Prop-type": {
-    color: settings.lightJet,
-    display: "block",
-    fontStyle: "italic",
-    lineHeight: "1em"
-  },
-  ".Prop-description": {
-    display: "block",
-    lineHeight: "1.3em",
-    marginTop: "0.5em"
-  },
-  ".Prop-examples, .Prop-default": {
-    display: "block",
-    lineHeight: "1.3em"
-  },
-  ".Prop-examples-title, .Prop-default-title": {
-    textTransform: "uppercase",
-    fontSize: "0.85em",
-    fontWeight: "bold",
-    color: settings.lightJet,
-    letterSpacing: "0.04em"
-  },
-  ".Prop-examples-value": {
-    fontFamily: settings.monospace
-  },
-  ".Prop-default-value": {
-    fontFamily: settings.monospace,
-    color: "#4d4945"
-  },
-  /* Utilities */
-  ".u-textCenter": {
-    textAlign: "center"
-  },
-  ".u-textLeft": {
-    textAlign: "left"
-  },
-  ".u-textRight": {
-    textAlign: "right"
-  },
-  ".u-marginModule > *:last-child": {
-    marginTop: 0
+    background: "none",
+    fontSize: "0.825rem"
   },
   mediaQueries: {
     [settings.mediaSizes.medium]: { //medium
@@ -432,13 +282,16 @@ export default {
       ".Headline--major": {
         fontSize: "2.75em"
       },
-      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+      ".Container": {
         paddingLeft: "5%",
         paddingRight: "5%"
+      },
+      ".Overview pre code": {
+        fontSize: "1rem"
       }
     },
     [settings.mediaSizes.large]: {
-      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
+      ".Container": {
         paddingLeft: "15%",
         paddingRight: "15%"
       }
@@ -459,20 +312,15 @@ export default {
       ".Headline": {
         fontSize: "2.75em"
       },
-      ".Headline--major": {
-        fontSize: "3.5rem",
-        lineHeight: 1.2,
-        fontStyle: "italic"
-      },
       ".Header": {
         paddingTop: "65px",
         paddingBottom: "0"
       },
-      ".Container p, .Container h1, .Container h2, .Container h3, .Container h4, .Container h5, .Container h6, .Container ol, .Container pre, .Container table, .Container ul": {
-        paddingLeft: "25%",
-        paddingRight: "25%"
+      ".Container": {
+        paddingLeft: "20%",
+        paddingRight: "20%"
       },
-      ".Copy, .Ecology p, .Ecology li": {
+      ".Copy": {
         fontSize: "1.125rem"
       },
       ".Copy--Big": {
@@ -486,26 +334,6 @@ export default {
       },
       ".Tagline": {
         textAlign: "center"
-      },
-      ".Installer": {
-        padding: "1.3334em 2.6667em", //24px 48px
-        marginTop: "1.3334em",
-        marginBottom: "1.3334em"
-      },
-      ".Interactive .playground": {
-        display: "flex",
-        flexWrap: "wrap"
-      },
-      ".Interactive .playgroundCode": {
-        display: "flex",
-        flex: "1",
-        marginRight: "0.6667em",
-        marginTop: 0
-      },
-      ".Interactive .playgroundPreview": {
-        display: "flex",
-        flex: "1",
-        marginLeft: "0.6667em"
       }
     }
   }
