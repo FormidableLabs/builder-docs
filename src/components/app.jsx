@@ -1,7 +1,7 @@
 import React from "react";
 import Radium, { Style, StyleRoot } from "radium";
-import ga from "react-ga";
-const OutboundLink = ga.OutboundLink;
+import ReactGA from "react-ga";
+const OutboundLink = ReactGA.OutboundLink;
 
 // Child components
 import Diagram from "./diagram-flavors";
@@ -15,7 +15,7 @@ import theme from "../builder-theme";
 
 class App extends React.Component {
   componentDidMount() {
-    ga.initialize("UA-43290258-1");
+    ReactGA.initialize("UA-43290258-1");
   }
 
   getLightLinkStyles() {
