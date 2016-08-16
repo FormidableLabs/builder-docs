@@ -14,10 +14,6 @@ import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
-  componentDidMount() {
-    ReactGA.initialize("UA-43290258-1");
-  }
-
   getLightLinkStyles() {
     return {
       color: settings.white,
