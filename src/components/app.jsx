@@ -8,12 +8,21 @@ import Diagram from "./diagram-flavors";
 import Docs from "./docs";
 import Hero from "./hero";
 import { Header, Footer } from "formidable-landers";
+import basename from "../basename";
 
 // Variables
 import settings from "../builder-variables";
 import theme from "../builder-theme";
 
 class App extends React.Component {
+  componentDidMount() {
+    // Add Google Analytics tracking here since react-router
+    // isn’t being used in entry.js
+    ReactGA.initialize("UA-43290258-1");
+    ReactGA.set({page: basename});
+    ReactGA.pageview(basename);
+  }
+
   getLightLinkStyles() {
     return {
       color: settings.white,
