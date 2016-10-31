@@ -30,3 +30,5 @@ travis encrypt-file ~/.ssh/deploy_static.pem --add
 ```
 
 Note: Make sure the travis config does not preserve the `~/.ssh/` filepath.
+
+To release this lander, please follow the [archetype release instructions](https://github.com/FormidableLabs/builder-docs-archetype#lander-release) for our `npm version` workflow.
